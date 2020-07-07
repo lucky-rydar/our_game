@@ -1,2 +1,5 @@
 /.vs
 our_game.sln
+*.vcxproj
+*.filters
+*.user
