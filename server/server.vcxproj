@@ -142,12 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Network.cpp" />
     <ClCompile Include="Server\CLI\CLI.cpp" />
     <ClCompile Include="Server\Network\DownLoader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Server\Network\UpLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Network.h" />
     <ClInclude Include="Server\CLI\CLI.h" />
     <ClInclude Include="Server\Network\DownLoader.h" />
     <ClInclude Include="Server\Network\UpLoader.h" />
