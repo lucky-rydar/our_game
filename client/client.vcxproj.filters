@@ -2,5 +2,41 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Client.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="DownLoader.cpp">
+      <Filter>Game\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="UpLoader.cpp">
+      <Filter>Game\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase.cpp">
+      <Filter>Game\Client</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Client.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="DownLoader.h">
+      <Filter>Game\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="UpLoader.h">
+      <Filter>Game\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBase.h">
+      <Filter>Game\Client</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{29b24d71-5784-4288-b7a8-1d5b831dbaef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Client">
+      <UniqueIdentifier>{3c71f4f7-159a-4120-b9c9-a0fc6be805a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
