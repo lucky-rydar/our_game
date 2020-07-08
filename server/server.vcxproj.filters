@@ -2,15 +2,17 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Server\Network\DownLoader.cpp" />
-    <ClCompile Include="Server\Network\UpLoader.cpp" />
-    <ClCompile Include="Server\CLI\CLI.cpp" />
-    <ClCompile Include="Network.cpp" />
+    <ClCompile Include="CLI\CLI.cpp" />
+    <ClCompile Include="CLI\Network\DownLoader.cpp" />
+    <ClCompile Include="CLI\Network\UpLoader.cpp" />
+    <ClCompile Include="CLI\Network\Network.cpp" />
+    <ClCompile Include="CLI\Network\DataBase.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Server\Network\DownLoader.h" />
-    <ClInclude Include="Server\Network\UpLoader.h" />
-    <ClInclude Include="Server\CLI\CLI.h" />
-    <ClInclude Include="Network.h" />
+    <ClInclude Include="CLI\CLI.h" />
+    <ClInclude Include="CLI\Network\DownLoader.h" />
+    <ClInclude Include="CLI\Network\UpLoader.h" />
+    <ClInclude Include="CLI\Network\Network.h" />
+    <ClInclude Include="CLI\Network\DataBase.h" />
   </ItemGroup>
 </Project>
