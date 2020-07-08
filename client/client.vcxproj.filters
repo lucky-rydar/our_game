@@ -1,17 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Game">
-      <UniqueIdentifier>{c404e07a-e775-4ff4-930b-b09157da0a80}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources">
-      <UniqueIdentifier>{9af1675f-8eb7-4884-9159-4ce9ee7ef5d3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="BaseClasses">
-      <UniqueIdentifier>{74fc02f4-cf44-43f8-b9dc-915224292fe8}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
 /.vs/
 /x64
 /client/x64
+/server/x64
 *.sln
 *.suo
 *.user
