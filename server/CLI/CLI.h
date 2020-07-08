@@ -1,5 +1,5 @@
 #pragma once
-class CLI
+class CLI // Command Line Interface class
 {
 private:
 

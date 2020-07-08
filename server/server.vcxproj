@@ -148,6 +148,7 @@
     <ClCompile Include="CLI\Network\DataBase.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CLI\Network\UpLoader.cpp" />
+    <ClCompile Include="CLI\Parser\Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLI\Network\Network.h" />
@@ -155,6 +156,7 @@
     <ClInclude Include="CLI\Network\DownLoader.h" />
     <ClInclude Include="CLI\Network\UpLoader.h" />
     <ClInclude Include="CLI\Network\DataBase.h" />
+    <ClInclude Include="CLI\Parser\Parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
