@@ -15,6 +15,24 @@
     <ClCompile Include="DataBase.cpp">
       <Filter>Game\Client</Filter>
     </ClCompile>
+    <ClCompile Include="InterfaceManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Game\InterfaceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMenu.cpp">
+      <Filter>Game\InterfaceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseMenu.cpp">
+      <Filter>Game\InterfaceManager\GameMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Game\InterfaceManager\GameMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInterface.cpp">
+      <Filter>Game\InterfaceManager\GameMenu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -30,6 +48,24 @@
     <ClInclude Include="DataBase.h">
       <Filter>Game\Client</Filter>
     </ClInclude>
+    <ClInclude Include="InterfaceManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Game\InterfaceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMenu.h">
+      <Filter>Game\InterfaceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseMenu.h">
+      <Filter>Game\InterfaceManager\GameMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Game\InterfaceManager\GameMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInterface.h">
+      <Filter>Game\InterfaceManager\GameMenu</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Game">
@@ -37,6 +73,12 @@
     </Filter>
     <Filter Include="Game\Client">
       <UniqueIdentifier>{3c71f4f7-159a-4120-b9c9-a0fc6be805a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\InterfaceManager">
+      <UniqueIdentifier>{5885f696-f8d3-4dbe-a4a9-3b5546d73c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\InterfaceManager\GameMenu">
+      <UniqueIdentifier>{0cc650ed-d451-415f-94f5-76e9c33d49d2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

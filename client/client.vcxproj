@@ -146,7 +146,13 @@
     <ClCompile Include="DataBase.cpp" />
     <ClCompile Include="DownLoader.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameInterface.cpp" />
+    <ClCompile Include="GameMenu.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="InterfaceManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="PauseMenu.cpp" />
     <ClCompile Include="UpLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +160,12 @@
     <ClInclude Include="DataBase.h" />
     <ClInclude Include="DownLoader.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameInterface.h" />
+    <ClInclude Include="GameMenu.h" />
+    <ClInclude Include="GameScene.h" />
+    <ClInclude Include="InterfaceManager.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="PauseMenu.h" />
     <ClInclude Include="UpLoader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
