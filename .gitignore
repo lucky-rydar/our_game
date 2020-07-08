@@ -1,5 +1,9 @@
-/.vs
-our_game.sln
-*.vcxproj
-*.filters
+/.vs/
+/x64
+/client/x64
+*.sln
+*.suo
 *.user
+*.userosscache
+*.sln.docstates
+*.userprefs
