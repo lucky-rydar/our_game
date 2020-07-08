@@ -2,5 +2,13 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Server\Network\DownLoader.cpp" />
+    <ClCompile Include="Server\Network\UpLoader.cpp" />
+    <ClCompile Include="Server\CLI\CLI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Server\Network\DownLoader.h" />
+    <ClInclude Include="Server\Network\UpLoader.h" />
+    <ClInclude Include="Server\CLI\CLI.h" />
   </ItemGroup>
 </Project>
