@@ -35,4 +35,7 @@
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\Label.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\LineEdit.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="config.cfg" />
+  </ItemGroup>
 </Project>
