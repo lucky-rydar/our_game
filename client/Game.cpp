@@ -18,7 +18,7 @@ void Game::exec()
 {
 	while (true)
 	{
-		imanager->update();
+		imanager->update(client);
 		imanager->draw();
 	}
 }
