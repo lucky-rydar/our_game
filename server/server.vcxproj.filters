@@ -8,6 +8,7 @@
     <ClCompile Include="CLI\Network\Network.cpp" />
     <ClCompile Include="CLI\Network\DataBase.cpp" />
     <ClCompile Include="CLI\Parser\Parser.cpp" />
+    <ClCompile Include="CLI\Parser\Config.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLI\CLI.h" />
@@ -16,5 +17,6 @@
     <ClInclude Include="CLI\Network\Network.h" />
     <ClInclude Include="CLI\Network\DataBase.h" />
     <ClInclude Include="CLI\Parser\Parser.h" />
+    <ClInclude Include="CLI\Parser\Config.h" />
   </ItemGroup>
 </Project>

@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Config.cpp" />
     <ClCompile Include="DataBase.cpp" />
     <ClCompile Include="DownLoader.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -157,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h" />
+    <ClInclude Include="Config.h" />
     <ClInclude Include="DataBase.h" />
     <ClInclude Include="DownLoader.h" />
     <ClInclude Include="Game.h" />
