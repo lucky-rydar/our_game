@@ -15,7 +15,7 @@ InterfaceManager::~InterfaceManager()
 	delete this->window;
 }
 
-void InterfaceManager::update()
+void InterfaceManager::update(Client* client)
 {
 	// TO DO here call update func of gameMenu and mainMenu 
 }

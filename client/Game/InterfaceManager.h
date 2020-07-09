@@ -2,6 +2,7 @@
 #include "InterfaceManager/GameMenu.h"
 #include "InterfaceManager/MainMenu.h"
 #include <SFML/Graphics.hpp>
+#include "Client.h"
 
 using namespace sf;
 
@@ -11,7 +12,7 @@ public:
 	InterfaceManager();
 	~InterfaceManager();
 
-	void update();
+	void update(Client *client);
 	void draw();
 
 private:
