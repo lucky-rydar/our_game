@@ -8,17 +8,15 @@
 class Game
 {
 public:
-
 	Game();
-
 	~Game();
+	
+	void exec();
+
 
 private:
-
 	Client *client;
-
 	Config *cfg;
-
 	InterfaceManager *imanager;
 
 };

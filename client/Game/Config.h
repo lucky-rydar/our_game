@@ -8,9 +8,9 @@ using namespace std;
 class Config
 {
 public:
-	Config();
+	Config(string fileName = "config.cfg");
 	~Config();
-	void loadConfig(string fileName = "config.cfg");
+	void loadConfig();
 	string getParam(string key);
 
 private:
