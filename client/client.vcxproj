@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\Button.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Game\Client\DataBase.cpp" />
     <ClCompile Include="Game\Client\DownLoader.cpp" />
@@ -154,9 +155,12 @@
     <ClCompile Include="Game\InterfaceManager\GameMenu\GameScene.cpp" />
     <ClCompile Include="Game\InterfaceManager\GameMenu\PauseMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\MainMenu.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\Label.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\LineEdit.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\Button.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Game\Client\DataBase.h" />
     <ClInclude Include="Game\Client\DownLoader.h" />
@@ -169,6 +173,8 @@
     <ClInclude Include="Game\InterfaceManager\GameMenu\GameScene.h" />
     <ClInclude Include="Game\InterfaceManager\GameMenu\PauseMenu.h" />
     <ClInclude Include="Game\InterfaceManager\MainMenu.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\Label.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\LineEdit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

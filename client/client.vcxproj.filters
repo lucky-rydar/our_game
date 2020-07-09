@@ -14,6 +14,9 @@
     <ClCompile Include="Game\Client\UpLoader.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\Button.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\Label.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\LineEdit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\InterfaceManager\GameMenu\GameInterface.h" />
@@ -28,5 +31,8 @@
     <ClInclude Include="Game\Client\DownLoader.h" />
     <ClInclude Include="Game\Client\UpLoader.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\Button.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\Label.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\LineEdit.h" />
   </ItemGroup>
 </Project>
