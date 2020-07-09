@@ -13,3 +13,12 @@ Game::~Game()
 	delete this->cfg;
 	delete this->imanager;
 }
+
+void Game::exec()
+{
+	while (true)
+	{
+		imanager->update();
+		imanager->draw();
+	}
+}
