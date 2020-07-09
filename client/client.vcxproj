@@ -142,33 +142,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Client.cpp" />
-    <ClCompile Include="Config.cpp" />
-    <ClCompile Include="DataBase.cpp" />
-    <ClCompile Include="DownLoader.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameInterface.cpp" />
-    <ClCompile Include="GameMenu.cpp" />
-    <ClCompile Include="GameScene.cpp" />
-    <ClCompile Include="InterfaceManager.cpp" />
+    <ClCompile Include="Game\Client\DataBase.cpp" />
+    <ClCompile Include="Game\Client\DownLoader.cpp" />
+    <ClCompile Include="Game\Client\UpLoader.cpp" />
+    <ClCompile Include="Game\Client.cpp" />
+    <ClCompile Include="Game\Config.cpp" />
+    <ClCompile Include="Game\InterfaceManager.cpp" />
+    <ClCompile Include="Game\InterfaceManager\GameMenu.cpp" />
+    <ClCompile Include="Game\InterfaceManager\GameMenu\GameInterface.cpp" />
+    <ClCompile Include="Game\InterfaceManager\GameMenu\GameScene.cpp" />
+    <ClCompile Include="Game\InterfaceManager\GameMenu\PauseMenu.cpp" />
+    <ClCompile Include="Game\InterfaceManager\MainMenu.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainMenu.cpp" />
-    <ClCompile Include="PauseMenu.cpp" />
-    <ClCompile Include="UpLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Client.h" />
-    <ClInclude Include="Config.h" />
-    <ClInclude Include="DataBase.h" />
-    <ClInclude Include="DownLoader.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="GameInterface.h" />
-    <ClInclude Include="GameMenu.h" />
-    <ClInclude Include="GameScene.h" />
-    <ClInclude Include="InterfaceManager.h" />
-    <ClInclude Include="MainMenu.h" />
-    <ClInclude Include="PauseMenu.h" />
-    <ClInclude Include="UpLoader.h" />
+    <ClInclude Include="Game\Client\DataBase.h" />
+    <ClInclude Include="Game\Client\DownLoader.h" />
+    <ClInclude Include="Game\Client\UpLoader.h" />
+    <ClInclude Include="Game\Client.h" />
+    <ClInclude Include="Game\Config.h" />
+    <ClInclude Include="Game\InterfaceManager.h" />
+    <ClInclude Include="Game\InterfaceManager\GameMenu.h" />
+    <ClInclude Include="Game\InterfaceManager\GameMenu\GameInterface.h" />
+    <ClInclude Include="Game\InterfaceManager\GameMenu\GameScene.h" />
+    <ClInclude Include="Game\InterfaceManager\GameMenu\PauseMenu.h" />
+    <ClInclude Include="Game\InterfaceManager\MainMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

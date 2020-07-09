@@ -1,12 +1,17 @@
-﻿  Client.cpp
-  DataBase.cpp
+﻿  DataBase.cpp
   DownLoader.cpp
-  Game.cpp
-  main.cpp
   UpLoader.cpp
+  Client.cpp
+  Config.cpp
+  InterfaceManager.cpp
+  GameMenu.cpp
+  GameInterface.cpp
+  GameScene.cpp
+  PauseMenu.cpp
+  MainMenu.cpp
   Создание кода
-  3 of 11 functions (27.3%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
+  0 of 11 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   client.vcxproj -> D:\my_projects\open_source_projects\our_game\x64\Release\client.exe
