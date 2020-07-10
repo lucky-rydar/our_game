@@ -4,6 +4,8 @@
 #include "InterfaceElements/Label.h"
 #include "InterfaceElements/LineEdit.h"
 #include "../Client.h"
+#include "CurrentIMMenu.h"
+
 using namespace sf;
 
 class MainMenu
@@ -13,7 +15,7 @@ public:
 	~MainMenu();
 
 	void draw(RenderWindow *win);
-	void update(Client *client);
+	void update(Client *client, CurrentIMMenu& curMenu);
 private:
 	Button* button;
 	Label* label;

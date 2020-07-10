@@ -22,7 +22,7 @@ void MainMenu::draw(RenderWindow* win)
 
 }
 
-void MainMenu::update(Client* client)
+void MainMenu::update(Client* client, CurrentIMMenu& curMenu)
 {
 }
 

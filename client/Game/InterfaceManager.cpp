@@ -21,9 +21,9 @@ InterfaceManager::~InterfaceManager()
 void InterfaceManager::update(Client* client)
 {
 	if (curMenu == CurrentIMMenu::Main)
-		mainMenu->update(client);
+		mainMenu->update(client, curMenu);
 	else if (curMenu == CurrentIMMenu::Game)
-		gameMenu->update(client);
+		gameMenu->update(client, curMenu);
 }
 
 void InterfaceManager::draw()
