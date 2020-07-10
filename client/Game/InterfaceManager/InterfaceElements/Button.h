@@ -10,6 +10,6 @@ public:
 
 	sf::Text* ButtonText;
 
-	void draw(sf::RenderWindow& wnd);
+	void draw(sf::RenderWindow* wnd);
 };
 

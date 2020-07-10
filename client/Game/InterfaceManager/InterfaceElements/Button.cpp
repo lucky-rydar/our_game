@@ -16,8 +16,8 @@ Button::~Button()
 	delete this->ButtonText;
 }
 
-void Button::draw(sf::RenderWindow& wnd)
+void Button::draw(sf::RenderWindow* wnd)
 {
-	wnd.draw(*this);
-	wnd.draw(*this->ButtonText);
+	wnd->draw(*this);
+	wnd->draw(*this->ButtonText);
 }
