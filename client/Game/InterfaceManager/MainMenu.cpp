@@ -33,16 +33,11 @@ void MainMenu::update(Client* client, CurrentIMMenu* curMenu)
 {
 	Mouse mouse;
 	auto mouse_pos = mouse.getPosition(*window);
-	cout << mouse_pos.x << " " << mouse_pos.y << endl;
+	
 	if (eve->type == Event::MouseButtonReleased && eve->mouseButton.button == Mouse::Left)
 	{
-		cout << button->isClicked(mouse_pos) << endl;
-		cout << button->getPosition().x << " " << button->getPosition().y << endl;
 		if (button->isClicked(mouse_pos))
-		{
 			*curMenu = CurrentIMMenu::Game;
-			
-		}
 			
 	}
 }
