@@ -8,7 +8,7 @@ InterfaceManager::InterfaceManager()
 	gameMenu = new GameMenu;
 	mainMenu = new MainMenu(winSize);
 
-	
+	curMenu = CurrentIMMenu::Main;
 }
 
 InterfaceManager::~InterfaceManager()
@@ -20,8 +20,10 @@ InterfaceManager::~InterfaceManager()
 
 void InterfaceManager::update(Client* client)
 {
-	// TO DO checking current window from statement variable
-	mainMenu->update(client);
+	if (curMenu == CurrentIMMenu::Main)
+		mainMenu->update(client);
+	else if (curMenu == CurrentIMMenu::Game)
+		gameMenu->update(client);
 }
 
 void InterfaceManager::draw()
@@ -37,8 +39,10 @@ void InterfaceManager::draw()
 
 		window->clear(Color(0, 0, 0, 0));
 
-		// TO DO checking current window from statement variable
-		mainMenu->draw(window);
+		if (curMenu == CurrentIMMenu::Main)
+			mainMenu->draw(window);
+		else if (curMenu == CurrentIMMenu::Game)
+			gameMenu->draw(window);
 
 		window->display();
 	}

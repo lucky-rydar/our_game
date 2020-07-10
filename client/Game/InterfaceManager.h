@@ -6,6 +6,12 @@
 
 using namespace sf;
 
+enum class CurrentIMMenu // it means CurrentInterfaceManagerMenu
+{
+	Main,
+	Game
+};
+
 class InterfaceManager
 {
 public:
@@ -19,6 +25,6 @@ private:
 	MainMenu *mainMenu;
 	GameMenu *gameMenu;
 	RenderWindow *window;
-	
+	CurrentIMMenu curMenu;
 };
 
