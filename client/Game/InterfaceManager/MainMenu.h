@@ -22,7 +22,6 @@ private:
 	Button* button;
 	Label* label;
 	LineEdit*  lineEdit;
-
-	Font font;
+	Font *font;
 };
 

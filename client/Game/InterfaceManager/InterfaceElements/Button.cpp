@@ -1,10 +1,9 @@
 #include "Button.h"
 
 //TODO: Text centering
-Button::Button(sf::Font& font, sf::String str, float x, float y, float sizex, float sizey)
+Button::Button(sf::Font* font, sf::String str, float x, float y, float sizex, float sizey)
 {
-	this->font = font;
-	ButtonText = new sf::Text(str, this->font);
+	ButtonText = new sf::Text(str, *font);
 	
 	this->ButtonText->setPosition(x, y);
 	

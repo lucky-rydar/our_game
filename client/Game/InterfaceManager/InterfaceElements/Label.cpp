@@ -1,10 +1,8 @@
 #include "Label.h"
 
-Label::Label(sf::Font& font, sf::String str, float x, float y)
+Label::Label(sf::Font* font, sf::String str, float x, float y)
 {
-	this->font = font;
-	
-	this->setFont(this->font);
+	this->setFont(*font);
 	this->setString(str);
 	this->setPosition(sf::Vector2f(x, y));
 }
