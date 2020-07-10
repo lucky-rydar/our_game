@@ -3,7 +3,7 @@
 MainMenu::MainMenu(sf::Vector2f WindowSize)
 {
 	sf::Font font;
-	font.loadFromFile(std::string("C:\\Windows\\Fonts\\Arial"));
+	font.loadFromFile(std::string("..\\Resources\\Fonts\\pixel_font.ttf"));
 
 	this->button = new Button(font, sf::String("Start"), WindowSize.x / 2, WindowSize.y / 2, 120.f, 30.f);
 	this->label = new Label(font, sf::String("our_game"), WindowSize.x / 2, WindowSize.y);
