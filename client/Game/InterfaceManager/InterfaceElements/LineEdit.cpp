@@ -33,9 +33,9 @@ LineEdit::~LineEdit()
 	delete this->EditRectangle;
 }
 
-void LineEdit::draw(sf::RenderWindow& wnd)
+void LineEdit::draw(sf::RenderWindow* wnd)
 {
-	wnd.draw(*this->EditBackground);
-	wnd.draw(*this->EditRectangle);
-	wnd.draw(*this->LineEditText);
+	wnd->draw(*this->EditBackground);
+	wnd->draw(*this->EditRectangle);
+	wnd->draw(*this->LineEditText);
 }

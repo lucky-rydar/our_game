@@ -8,6 +8,6 @@ public:
 
 	~Label();
 
-	void draw(sf::RenderWindow& wnd);
+	void draw(sf::RenderWindow* wnd);
 };
 

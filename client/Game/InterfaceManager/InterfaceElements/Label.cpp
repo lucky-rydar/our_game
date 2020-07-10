@@ -7,7 +7,11 @@ Label::Label(sf::Font font, sf::String str, float x, float y)
 	this->setPosition(sf::Vector2f(x, y));
 }
 
-void Label::draw(sf::RenderWindow& wnd)
+Label::~Label()
 {
-	wnd.draw(*this);
+}
+
+void Label::draw(sf::RenderWindow* wnd)
+{
+	wnd->draw(*this);
 }

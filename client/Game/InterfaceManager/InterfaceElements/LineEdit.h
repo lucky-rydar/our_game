@@ -14,6 +14,6 @@ public:
 
 	sf::Text* LineEditText;
 
-	void draw(sf::RenderWindow& wnd);
+	void draw(sf::RenderWindow* wnd);
 };
 
