@@ -4,7 +4,7 @@
 class Label : public sf::Text
 {
 public:
-	Label(sf::Font* font, sf::String str, float x, float y);
+	Label(sf::Font* font, sf::String str, float x, float y, sf::Color clr);
 	~Label();
 	void draw(sf::RenderWindow* wnd);
 
