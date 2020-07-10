@@ -20,7 +20,8 @@ InterfaceManager::~InterfaceManager()
 
 void InterfaceManager::update(Client* client)
 {
-	// TO DO here call update func of gameMenu and mainMenu 
+	// TO DO checking current window from statement variable
+	mainMenu->update(client);
 }
 
 void InterfaceManager::draw()
@@ -36,7 +37,8 @@ void InterfaceManager::draw()
 
 		window->clear(Color(0, 0, 0, 0));
 
-		// TO DO drawing gamMenu and mainMenu
+		// TO DO checking current window from statement variable
+		mainMenu->draw(window);
 
 		window->display();
 	}

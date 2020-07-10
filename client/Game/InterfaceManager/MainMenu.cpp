@@ -17,3 +17,12 @@ MainMenu::~MainMenu()
 	delete this->lineEdit;
 }
 
+void MainMenu::draw(RenderWindow* win)
+{
+
+}
+
+void MainMenu::update(Client* client)
+{
+}
+
