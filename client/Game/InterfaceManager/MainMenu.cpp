@@ -36,7 +36,7 @@ void MainMenu::update(Client* client, CurrentIMMenu* curMenu)
 	
 	if (eve->type == Event::MouseButtonReleased && eve->mouseButton.button == Mouse::Left)
 	{
-		if (button->isClicked(mouse_pos))
+		if (button->isOnButton(mouse_pos))
 			*curMenu = CurrentIMMenu::Game;
 			
 	}

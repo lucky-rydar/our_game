@@ -9,7 +9,7 @@ public:
 	Button(sf::Font* font, sf::String str, float x, float y, float scalex, float scaley, sf::Color clr);
 	~Button();
 	void draw(sf::RenderWindow* wnd);
-	bool isClicked(Vector2i pos);
+	bool isOnButton(Vector2i pos);
 
 
 	sf::Text *ButtonText;
