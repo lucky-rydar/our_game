@@ -19,7 +19,9 @@ MainMenu::~MainMenu()
 
 void MainMenu::draw(RenderWindow* win)
 {
-
+	this->button->draw(*win);
+	this->label->draw(*win);
+	this->lineEdit->draw(*win);
 }
 
 void MainMenu::update(Client* client, CurrentIMMenu& curMenu)
