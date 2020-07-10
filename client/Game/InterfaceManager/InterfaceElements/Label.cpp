@@ -2,17 +2,12 @@
 
 Label::Label(sf::Font font, sf::String str, float x, float y)
 {
-	this->LabelText = new sf::Text(str, font);
-
-	this->LabelText->setPosition(sf::Vector2f(x, y));
-}
-
-Label::~Label()
-{
-	delete this->LabelText;
+	this->setFont(font);
+	this->setString(str);
+	this->setPosition(sf::Vector2f(x, y));
 }
 
 void Label::draw(sf::RenderWindow& wnd)
 {
-	wnd.draw(*this->LabelText);
+	wnd.draw(*this);
 }
