@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game\InterfaceManager\CurrentIMMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\Button.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Game\Client\DataBase.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game\InterfaceManager\CurrentIMMenu.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\Button.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Game\Client\DataBase.h" />
