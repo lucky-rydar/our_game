@@ -11,3 +11,8 @@ Label::~Label()
 {
 	delete this->LabelText;
 }
+
+void Label::draw(sf::RenderWindow& wnd)
+{
+	wnd.draw(*this->LabelText);
+}

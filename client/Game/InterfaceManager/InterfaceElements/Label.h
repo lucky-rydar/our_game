@@ -9,5 +9,7 @@ public:
 	~Label();
 
 	sf::Text* LabelText;
+
+	void draw(sf::RenderWindow& wnd);
 };
 

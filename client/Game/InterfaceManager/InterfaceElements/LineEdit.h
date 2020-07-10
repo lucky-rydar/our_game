@@ -13,5 +13,7 @@ public:
 	sf::RectangleShape* EditRectangle;
 
 	sf::Text* LineEditText;
+
+	void draw(sf::RenderWindow& wnd);
 };
 
