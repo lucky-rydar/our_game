@@ -2,9 +2,11 @@
 
 
 //TODO: Line edit input
-LineEdit::LineEdit(sf::Font font, sf::String str, float x, float y, float sizex, float sizey) // Edit Without Background
+LineEdit::LineEdit(sf::Font &font, sf::String str, float x, float y, float sizex, float sizey) // Edit Without Background
 {
-	this->LineEditText = new sf::Text(str, font);
+	this->font = font;
+
+	this->LineEditText = new sf::Text(str, this->font);
 	this->LineEditText->setPosition(x, y);
 
 	this->EditRectangle = new sf::RectangleShape(sf::Vector2f(sizex, sizey));
@@ -14,9 +16,11 @@ LineEdit::LineEdit(sf::Font font, sf::String str, float x, float y, float sizex,
 	this->EditRectangle->setPosition(x, y);
 }
 
-LineEdit::LineEdit(sf::Font font, sf::String str, float x, float y, float ebx, float eby, float erx, float ery) // Edit With Background
+LineEdit::LineEdit(sf::Font& font, sf::String str, float x, float y, float ebx, float eby, float erx, float ery) // Edit With Background
 {
-	this->LineEditText = new sf::Text(str, font);
+	this->font = font;
+	
+	this->LineEditText = new sf::Text(str, this->font);
 	this->LineEditText->setPosition(x, y);
 
 	this->EditRectangle = new sf::RectangleShape(sf::Vector2f(erx, ery));
