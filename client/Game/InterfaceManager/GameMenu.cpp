@@ -1,10 +1,11 @@
 #include "GameMenu.h"
 
-GameMenu::GameMenu()
+GameMenu::GameMenu(RenderWindow* win)
 {
 	gameInterface = new GameInterface;
 	gameScene = new GameScene;
 	pauseMenu = new PauseMenu;
+	window = win;
 }
 
 GameMenu::~GameMenu()
@@ -14,10 +15,10 @@ GameMenu::~GameMenu()
 	delete pauseMenu;
 }
 
-void GameMenu::draw(RenderWindow* win)
+void GameMenu::draw()
 {
 }
 
-void GameMenu::update(Client* client, CurrentIMMenu& curMenu)
+void GameMenu::update(Client* client, CurrentIMMenu* curMenu)
 {
 }

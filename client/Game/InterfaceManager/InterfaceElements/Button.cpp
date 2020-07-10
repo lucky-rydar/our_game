@@ -29,3 +29,8 @@ void Button::draw(sf::RenderWindow* wnd)
 	wnd->draw(*this);
 	wnd->draw(*this->ButtonText);
 }
+
+bool Button::isClicked(Vector2i pos)
+{
+	return this->getGlobalBounds().contains((float)pos.x, (float)pos.y);
+}

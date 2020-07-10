@@ -4,7 +4,7 @@ Game::Game()
 {
 	this->client = new Client;
 	this->cfg = new Config;
-	this->imanager = new InterfaceManager;
+	this->imanager = new InterfaceManager(client);
 }
 
 Game::~Game()
@@ -18,7 +18,7 @@ void Game::exec()
 {
 	while (true)
 	{
-		imanager->update(client);
+		imanager->update();
 		imanager->draw();
 	}
 }

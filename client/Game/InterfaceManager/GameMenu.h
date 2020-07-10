@@ -11,14 +11,15 @@ using namespace sf;
 class GameMenu
 {
 public:
-	GameMenu();
+	GameMenu(RenderWindow *win);
 	~GameMenu();
 
-	void draw(RenderWindow *win);
-	void update(Client *client, CurrentIMMenu& curMenu);
+	void draw();
+	void update(Client *client, CurrentIMMenu* curMenu);
 private:
 	GameInterface* gameInterface;
 	GameScene* gameScene;
 	PauseMenu* pauseMenu;
+	RenderWindow* window;
 };
 
