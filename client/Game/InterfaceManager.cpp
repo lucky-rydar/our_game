@@ -2,10 +2,13 @@
 
 InterfaceManager::InterfaceManager()
 {
-	gameMenu = new GameMenu;
-	mainMenu = new MainMenu;
+	Vector2f winSize(1280, 720);
 
-	window = new RenderWindow(VideoMode(1280, 720), "our_game");
+	window = new RenderWindow(VideoMode(winSize.x, winSize.y), "our_game");
+	gameMenu = new GameMenu;
+	mainMenu = new MainMenu(winSize);
+
+	
 }
 
 InterfaceManager::~InterfaceManager()

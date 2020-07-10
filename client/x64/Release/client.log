@@ -1,1 +1,7 @@
-﻿  client.vcxproj -> D:\my_projects\open_source_projects\our_game\x64\Release\client.exe
+﻿  MainMenu.cpp
+  Создание кода
+  33 of 239 functions (13.8%) were compiled, the rest were copied from previous compilation.
+    14 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  client.vcxproj -> D:\my_projects\open_source_projects\our_game\x64\Release\client.exe
