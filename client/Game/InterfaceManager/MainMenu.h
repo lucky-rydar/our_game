@@ -5,8 +5,10 @@
 #include "InterfaceElements/LineEdit.h"
 #include "../Client.h"
 #include "CurrentIMMenu.h"
+#include <iostream>
 
 using namespace sf;
+using namespace std;
 
 class MainMenu
 {

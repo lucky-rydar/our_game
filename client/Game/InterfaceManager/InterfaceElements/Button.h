@@ -8,7 +8,7 @@ public:
 
 	~Button();
 
-	sf::Text* ButtonText;
+	sf::Text *ButtonText;
 
 	void draw(sf::RenderWindow* wnd);
 };
