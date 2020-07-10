@@ -4,6 +4,7 @@
 #include "GameMenu/GameInterface.h"
 #include "GameMenu/GameScene.h"
 #include "GameMenu/PauseMenu.h"
+#include "CurrentIMMenu.h"
 
 using namespace sf;
 
@@ -14,7 +15,7 @@ public:
 	~GameMenu();
 
 	void draw(RenderWindow *win);
-	void update(Client *client);
+	void update(Client *client, CurrentIMMenu& curMenu);
 private:
 	GameInterface* gameInterface;
 	GameScene* gameScene;

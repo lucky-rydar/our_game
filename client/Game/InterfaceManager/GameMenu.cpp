@@ -18,6 +18,6 @@ void GameMenu::draw(RenderWindow* win)
 {
 }
 
-void GameMenu::update(Client* client)
+void GameMenu::update(Client* client, CurrentIMMenu& curMenu)
 {
 }

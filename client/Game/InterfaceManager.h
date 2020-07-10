@@ -3,14 +3,9 @@
 #include "InterfaceManager/MainMenu.h"
 #include <SFML/Graphics.hpp>
 #include "Client.h"
+#include "InterfaceManager/CurrentIMMenu.h"
 
 using namespace sf;
-
-enum class CurrentIMMenu // it means CurrentInterfaceManagerMenu
-{
-	Main,
-	Game
-};
 
 class InterfaceManager
 {
