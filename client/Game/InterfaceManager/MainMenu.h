@@ -5,6 +5,7 @@
 #include "InterfaceElements/Label.h"
 #include "InterfaceElements/LineEdit.h"
 #include "InterfaceElements/CheckBox.h"
+#include "InterfaceElements/SpriteLineEdit.h"
 #include "../Client.h"
 #include "CurrentIMMenu.h"
 #include "CurrentMainMenu.h"
@@ -27,6 +28,11 @@ private:
 	SpriteButton* SettingsButton;
 	SpriteButton* ExitButton;
 	SpriteButton* SettingsBack;
+
+	SpriteLineEdit* UsrName;
+
+	CheckBox* Vsync;
+	Label* Vsynclabel;
 
 	Label* label;
 	LineEdit*  lineEdit;

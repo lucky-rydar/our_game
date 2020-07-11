@@ -53,7 +53,7 @@ void LineEdit::update(Event* eve)
 		}
 		else if (eve->mouseButton.button == Mouse::Right && isClicked(Vector2i(eve->mouseButton.x, eve->mouseButton.y)))
 		{
-			// we downt need this yet
+			// we dont need this yet
 		}
 	}
 	if (eve->type == Event::KeyReleased)

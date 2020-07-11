@@ -4,11 +4,14 @@ CheckBox::CheckBox(sf::Texture box, sf::Texture mark, float x, float y, float sc
 {
 	this->wnd = wnd;
 
-	this->Box = new sf::Sprite(box);
+	this->BoxTexture = new sf::Texture(box);
+	this->MarkTexture = new sf::Texture(mark);
+
+	this->Box = new sf::Sprite(*this->BoxTexture);
 	this->Box->setPosition(x, y);
 	this->Box->setScale(scalex, scaley);
 
-	this->Mark = new sf::Sprite(mark);
+	this->Mark = new sf::Sprite(*this->MarkTexture);
 	this->Mark->setPosition(x, y);
 	this->Mark->setScale(scalex, scaley);
 
@@ -34,16 +37,22 @@ void CheckBox::update(sf::Event* eve)
 	sf::Mouse mouse;
 	auto pos = mouse.getPosition(*wnd);
 
-	if (eve->type == sf::Event::MouseButtonReleased)
+	if (eve->type == sf::Event::MouseButtonPressed)
 	{
 		if (eve->mouseButton.button == sf::Mouse::Left)
 		{
 			if (isOnCheck(pos))
 			{
 				if (this->isChecked)
+				{
 					this->isChecked = false;
-				else this->isChecked = true;
-				onCheck();
+					nonCheck();
+				}
+				if(!this->isChecked)
+				{
+					this->isChecked = true;
+					onCheck();
+				}
 			}
 		}
 	}
@@ -54,6 +63,11 @@ void CheckBox::update(sf::Event* eve)
 void CheckBox::SetOnCheckFunc(std::function<void(void)> func)
 {
 	this->onCheck = func;
+}
+
+void CheckBox::SetNonCheckFunc(std::function<void(void)> func)
+{
+	this->nonCheck = func;
 }
 
 bool CheckBox::isOnCheck(sf::Vector2i pos)

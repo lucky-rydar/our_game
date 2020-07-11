@@ -12,6 +12,7 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	this->lineEdit = new LineEdit(font, "Hello", 1, 1, 100, 50, Color::Black, Color::White);
 
 	sf::Texture texture;
+	sf::Texture texture2;
 	texture.loadFromFile("Resources\\Sprites\\Interface\\Button 1.png");
 
 	this->PlayButton = new SpriteButton(font, sf::String("Play"), WindowSize.x / 2, WindowSize.y / 2 - 200, 1.f, 1.f, texture, win);
@@ -27,8 +28,20 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	this->ExitButton->setOnButtonFunc([win]() {win->close(); });
 
 	this->label = new Label(font, sf::String("our_game"), WindowSize.x / 2 + 40, WindowSize.y / 8, sf::Color::White);
+
 	this->lineEdit = new LineEdit(font, sf::String("Username"), WindowSize.x / 2, WindowSize.y / 2 - 100, 300.f, 60.f, 150.f, 30.f, sf::Color::Blue,
 		sf::Color::Black, sf::Color::White);
+
+	this->Vsynclabel = new Label(font, sf::String("VSync"), WindowSize.x / 1.3, WindowSize.y / 9, sf::Color::White);
+
+	texture.loadFromFile("Resources\\Sprites\\Interface\\CheckBox.png");
+	texture2.loadFromFile("Resources\\Sprites\\Interface\\Mark.png");
+	this->Vsync = new CheckBox(texture, texture2, WindowSize.x / 1.15, WindowSize.y / 9, 0.75, 0.75, win);
+	this->Vsync->SetOnCheckFunc([win]() {win->setVerticalSyncEnabled(true); });
+	this->Vsync->SetNonCheckFunc([win]() {win->setVerticalSyncEnabled(false); });
+
+	texture.loadFromFile("Resources\\Sprites\\Interface\\Button 3.png");
+	this->UsrName = new SpriteLineEdit(font, "Username", texture, WindowSize.x / 2, WindowSize.y / 2, 1.f, 1.f, win);
 
 	this->eve = eve;
 }
@@ -55,11 +68,16 @@ void MainMenu::draw()
 
 		this->label->draw(window);
 		
-		this->lineEdit->draw(window); // here
+		//this->lineEdit->draw(window); // here
 	}
 	else if (*this->curMMenu == CurrentMainMenu::Settings)
 	{
 		this->SettingsBack->draw();
+
+		this->Vsync->draw();
+		this->Vsynclabel->draw(window);
+
+		this->UsrName->draw();
 	}
 	
 }
@@ -68,7 +86,7 @@ void MainMenu::update(Client* client)
 {
 	if (*this->curMMenu == CurrentMainMenu::Main)
 	{
-		lineEdit->update(eve);
+		//lineEdit->update(eve);
 		PlayButton->update(eve);
 		SettingsButton->update(eve);
 		ExitButton->update(eve);
@@ -76,6 +94,10 @@ void MainMenu::update(Client* client)
 	else if (*this->curMMenu == CurrentMainMenu::Settings)
 	{
 		this->SettingsBack->update(eve);
+
+		this->Vsync->update(eve);
+
+		this->UsrName->update(eve);
 	}
 }
 
