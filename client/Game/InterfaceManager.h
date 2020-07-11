@@ -1,4 +1,5 @@
 #pragma once
+#pragma warning(disable: 4244)
 #include "InterfaceManager/GameMenu.h"
 #include "InterfaceManager/MainMenu.h"
 #include <SFML/Graphics.hpp>
