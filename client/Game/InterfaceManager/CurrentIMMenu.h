@@ -3,6 +3,6 @@
 enum class CurrentIMMenu // it means CurrentInterfaceManagerMenu
 {
 	Main,
-	Game,
+	Game
 };
 
