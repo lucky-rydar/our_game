@@ -7,6 +7,7 @@ SpriteButton::SpriteButton(sf::Font* font, sf::String str, float x, float y, flo
 
 	this->setScale(scalex, scaley);
 	this->setTexture(this->texture);
+	this->defaultScale = new sf::Vector2f(scalex, scaley);
 
 	sf::FloatRect bounds;
 	const sf::Vector2f box(
@@ -27,6 +28,7 @@ SpriteButton::SpriteButton(sf::Font* font, sf::String str, float x, float y, flo
 SpriteButton::~SpriteButton()
 {
 	delete this->ButtonText;
+	delete this->defaultScale;
 }
 
 void SpriteButton::draw()
@@ -35,7 +37,43 @@ void SpriteButton::draw()
 	wnd->draw(*this->ButtonText);
 }
 
-void SpriteButton::update()
+void SpriteButton::update(sf::Event* eve)
 {
+	sf::Mouse mouse;
+	auto pos = mouse.getPosition(*wnd);
 
+	if (eve->type == sf::Event::MouseButtonPressed)
+	{
+		if (eve->mouseButton.button == sf::Mouse::Left)
+		{
+			if (isOnButton(pos))
+				this->setScale(0.9, 0.9);
+		}
+	}
+
+	if (eve->type == sf::Event::MouseButtonReleased)
+	{
+		if (eve->mouseButton.button == sf::Mouse::Left)
+		{
+			if (isOnButton(pos))
+			{
+				this->setScale(*this->defaultScale);
+				onButton();
+			}
+		}
+		else if (eve->mouseButton.button == sf::Mouse::Left)
+		{
+			// we do not need that yet
+		}
+	}
+}
+
+void SpriteButton::setOnButtonFunc(std::function<void(void)> func)
+{
+	this->onButton = func;
+}
+
+bool SpriteButton::isOnButton(sf::Vector2i pos)
+{
+	return this->getGlobalBounds().contains((float)pos.x, (float)pos.y);
 }
