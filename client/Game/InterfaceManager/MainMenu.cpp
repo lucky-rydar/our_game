@@ -9,8 +9,7 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	font = new Font;
 	font->loadFromFile(std::string("Resources\\Fonts\\lilita_one_rus.ttf"));
 
-	/*this->button = new Button(font, sf::String("Play"), WindowSize.x / 2, WindowSize.y / 2, 150.f, 30.f, sf::Color::Red, win);
-	this->button->setOnButtonFunc([curMenu]() {*curMenu = CurrentIMMenu::Game; });*/
+	this->lineEdit = new LineEdit(font, "Hello", 1, 1, 100, 50, Color::Black, Color::White);
 
 	sf::Texture texture;
 	texture.loadFromFile("Resources\\Sprites\\Interface\\Button 1.png");
@@ -55,19 +54,21 @@ void MainMenu::draw()
 		this->ExitButton->draw();
 
 		this->label->draw(window);
+		
+		this->lineEdit->draw(window); // here
 	}
 	else if (*this->curMMenu == CurrentMainMenu::Settings)
 	{
 		this->SettingsBack->draw();
 	}
-	//this->lineEdit->draw(window);
+	
 }
 
 void MainMenu::update(Client* client)
 {
 	if (*this->curMMenu == CurrentMainMenu::Main)
 	{
-		//button->update(eve);
+		lineEdit->update(eve);
 		PlayButton->update(eve);
 		SettingsButton->update(eve);
 		ExitButton->update(eve);

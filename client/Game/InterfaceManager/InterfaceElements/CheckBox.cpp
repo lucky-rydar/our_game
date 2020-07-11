@@ -20,7 +20,6 @@ CheckBox::~CheckBox()
 {
 	delete this->Box;
 	delete this->Mark;
-	delete this->isChecked;
 }
 
 void CheckBox::draw()
@@ -41,9 +40,9 @@ void CheckBox::update(sf::Event* eve)
 		{
 			if (isOnCheck(pos))
 			{
-				if (*this->isChecked)
-					*this->isChecked = false;
-				else *this->isChecked = true;
+				if (this->isChecked)
+					this->isChecked = false;
+				else this->isChecked = true;
 				onCheck();
 			}
 		}

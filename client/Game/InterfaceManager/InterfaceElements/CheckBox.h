@@ -14,7 +14,7 @@ public:
 	void SetOnCheckFunc(std::function<void(void)> func);
 private:
 	bool isOnCheck(sf::Vector2i pos);
-	bool* isChecked;
+	bool isChecked;
 
 	std::function<void(void)> onCheck;
 
