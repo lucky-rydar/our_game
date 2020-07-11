@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Game\InterfaceManager\GameMenu\GameInterface.cpp" />
+    <ClCompile Include="Game\InterfaceManager\GameMenu\GameScene.cpp" />
+    <ClCompile Include="Game\InterfaceManager\GameMenu\PauseMenu.cpp" />
+    <ClCompile Include="Game\InterfaceManager\GameMenu.cpp" />
+    <ClCompile Include="Game\InterfaceManager\MainMenu.cpp" />
+    <ClCompile Include="Game\Client.cpp" />
+    <ClCompile Include="Game\Config.cpp" />
+    <ClCompile Include="Game\InterfaceManager.cpp" />
+    <ClCompile Include="Game\Client\DataBase.cpp" />
+    <ClCompile Include="Game\Client\DownLoader.cpp" />
+    <ClCompile Include="Game\Client\UpLoader.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\Button.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\Label.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\LineEdit.cpp" />
+    <ClCompile Include="Game\InterfaceManager\CurrentIMMenu.cpp" />
+    <ClCompile Include="CurrentGMMenu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game\InterfaceManager\GameMenu\GameInterface.h" />
+    <ClInclude Include="Game\InterfaceManager\GameMenu\GameScene.h" />
+    <ClInclude Include="Game\InterfaceManager\GameMenu\PauseMenu.h" />
+    <ClInclude Include="Game\InterfaceManager\GameMenu.h" />
+    <ClInclude Include="Game\InterfaceManager\MainMenu.h" />
+    <ClInclude Include="Game\Client.h" />
+    <ClInclude Include="Game\Config.h" />
+    <ClInclude Include="Game\InterfaceManager.h" />
+    <ClInclude Include="Game\Client\DataBase.h" />
+    <ClInclude Include="Game\Client\DownLoader.h" />
+    <ClInclude Include="Game\Client\UpLoader.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\Button.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\Label.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\LineEdit.h" />
+    <ClInclude Include="Game\InterfaceManager\CurrentIMMenu.h" />
+    <ClInclude Include="CurrentGMMenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.cfg" />
+  </ItemGroup>
+</Project>

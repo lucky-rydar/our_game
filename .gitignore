@@ -2,8 +2,6 @@
 /.vs
 /client/x64
 /server/x64
-*.vcxproj
-*.filters
 *.obj
 *.log
 *.tlog

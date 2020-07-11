@@ -22,23 +22,3 @@ private:
 	function<void(void)> onButton;
 	RenderWindow *wnd;
 };
-
-class Collider
-{
-public:
-private:
-};
-
-class SpriteButton : public sf::Sprite
-{
-public:
-	SpriteButton(sf::Font* font, sf::String str, float x, float y, float scalex, float scaley, sf::Texture texture, sf::RenderWindow* wnd);
-	~SpriteButton();
-	void draw();
-	void update();
-
-	sf::Text* ButtonText;
-private:
-	RenderWindow* wnd;
-	sf::Texture texture;
-};
