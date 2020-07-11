@@ -19,6 +19,6 @@ void GameMenu::draw()
 {
 }
 
-void GameMenu::update(Client* client, CurrentIMMenu* curMenu)
+void GameMenu::update(Client* client)
 {
 }

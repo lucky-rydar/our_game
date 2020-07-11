@@ -6,8 +6,8 @@ InterfaceManager::InterfaceManager(Client *client)
 	eve = new Event;
 	window = new RenderWindow(VideoMode(winSize.x, winSize.y), "our_game");
 	gameMenu = new GameMenu(window);
-	mainMenu = new MainMenu(winSize, eve, window);
 	curMenu = CurrentIMMenu::Main;
+	mainMenu = new MainMenu(winSize, eve, window, &curMenu);
 	this->client = client;
 }
 
@@ -23,9 +23,9 @@ InterfaceManager::~InterfaceManager()
 void InterfaceManager::update()
 {
 	if (curMenu == CurrentIMMenu::Main)
-		mainMenu->update(client, &curMenu);
+		mainMenu->update(client);
 	else if (curMenu == CurrentIMMenu::Game)
-		gameMenu->update(client, &curMenu);
+		gameMenu->update(client);
 }
 
 void InterfaceManager::draw()
@@ -39,7 +39,7 @@ void InterfaceManager::draw()
 				window->close();
 		}
 
-		window->clear(Color(0, 0, 0, 0));
+		window->clear(Color::Black);
 
 		if (curMenu == CurrentIMMenu::Main)
 			mainMenu->draw();

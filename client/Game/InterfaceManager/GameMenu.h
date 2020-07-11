@@ -15,7 +15,7 @@ public:
 	~GameMenu();
 
 	void draw();
-	void update(Client *client, CurrentIMMenu* curMenu);
+	void update(Client *client);
 private:
 	GameInterface* gameInterface;
 	GameScene* gameScene;

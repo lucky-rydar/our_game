@@ -13,17 +13,19 @@ using namespace std;
 class MainMenu
 {
 public:
-	MainMenu(sf::Vector2f WindowSize, Event* eve, RenderWindow* win);
+	MainMenu(sf::Vector2f WindowSize, Event* eve, RenderWindow* win, CurrentIMMenu *curMenu);
 	~MainMenu();
 
 	void draw();
-	void update(Client *client, CurrentIMMenu* curMenu);
+	void update(Client *client);
 private:
 	Button* button;
 	Label* label;
 	LineEdit*  lineEdit;
 	Font *font;
-	Event *eve;
-	RenderWindow *window;
+	
+	
+	Event *eve; // do not delete them in 
+	RenderWindow *window; // destructor
 };
 
