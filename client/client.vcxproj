@@ -159,6 +159,7 @@
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\Label.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\LineEdit.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Game\SpriteSet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\InterfaceManager\CurrentIMMenu.h" />
@@ -177,6 +178,7 @@
     <ClInclude Include="Game\InterfaceManager\MainMenu.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\Label.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\LineEdit.h" />
+    <ClInclude Include="Game\SpriteSet.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.cfg" />
