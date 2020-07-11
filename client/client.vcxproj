@@ -146,7 +146,6 @@
     <ClCompile Include="Game\InterfaceManager\CurrentIMMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\Button.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Game\Client\DataBase.cpp" />
     <ClCompile Include="Game\Client\DownLoader.cpp" />
     <ClCompile Include="Game\Client\UpLoader.cpp" />
     <ClCompile Include="Game\Client.cpp" />
@@ -166,7 +165,6 @@
     <ClInclude Include="Game\InterfaceManager\CurrentIMMenu.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\Button.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Game\Client\DataBase.h" />
     <ClInclude Include="Game\Client\DownLoader.h" />
     <ClInclude Include="Game\Client\UpLoader.h" />
     <ClInclude Include="Game\Client.h" />

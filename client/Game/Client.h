@@ -1,21 +1,27 @@
 #pragma once
 #include <SFML/Network.hpp>
-#include "Client/DataBase.h"
 #include "Client/DownLoader.h"
 #include "Client/UpLoader.h"
+#include "Config.h"
+#include <map>
+
+using namespace sf;
+using namespace std;
 
 class Client
 {
 public:
-	Client();
-
+	Client(Config* cfg);
 	~Client();
+
+	void update();
 private:
-
-	DataBase *db;
-
 	DownLoader *downLoader;
-
 	UpLoader *upLoader;
+	Config *config;
+	Packet* packToSend;
+	Packet* packToReceive;
+	
+	
 };
 

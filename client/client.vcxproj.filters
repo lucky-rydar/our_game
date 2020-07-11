@@ -8,7 +8,6 @@
     <ClCompile Include="Game\Client.cpp" />
     <ClCompile Include="Game\Config.cpp" />
     <ClCompile Include="Game\InterfaceManager.cpp" />
-    <ClCompile Include="Game\Client\DataBase.cpp" />
     <ClCompile Include="Game\Client\DownLoader.cpp" />
     <ClCompile Include="Game\Client\UpLoader.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -28,7 +27,6 @@
     <ClInclude Include="Game\Client.h" />
     <ClInclude Include="Game\Config.h" />
     <ClInclude Include="Game\InterfaceManager.h" />
-    <ClInclude Include="Game\Client\DataBase.h" />
     <ClInclude Include="Game\Client\DownLoader.h" />
     <ClInclude Include="Game\Client\UpLoader.h" />
     <ClInclude Include="Game.h" />

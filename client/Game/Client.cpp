@@ -1,15 +1,24 @@
 #include "Client.h"
 
-Client::Client()
+Client::Client(Config* cfg)
 {
-	this->db = new DataBase;
-	this->downLoader = new DownLoader;
-	this->upLoader = new UpLoader;
+	this->packToReceive = new Packet();
+	this->packToSend = new Packet();
+	
+	this->downLoader = new DownLoader(packToReceive);
+	this->upLoader = new UpLoader(packToSend);
+	this->config = cfg;
 }
 
 Client::~Client()
 {
-	delete this->db;
 	delete this->downLoader;
 	delete this->upLoader;
+}
+
+void Client::update()
+{
+	downLoader->receive();
+
+	upLoader->send();
 }

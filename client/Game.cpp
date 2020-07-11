@@ -2,8 +2,8 @@
 
 Game::Game()
 {
-	this->client = new Client;
 	this->cfg = new Config;
+	this->client = new Client(cfg);
 	this->imanager = new InterfaceManager(client);
 }
 
