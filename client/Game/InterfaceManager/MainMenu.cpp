@@ -25,7 +25,7 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	this->SettingsBack->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Main; });
 
 	this->ExitButton = new SpriteButton(font, sf::String("Exit"), WindowSize.x / 2, WindowSize.y / 2, 1.f, 1.f, texture, win);
-	this->ExitButton->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Main; });
+	this->ExitButton->setOnButtonFunc([win]() {win->close(); });
 
 	this->label = new Label(font, sf::String("our_game"), WindowSize.x / 2, WindowSize.y, sf::Color::White);
 	this->lineEdit = new LineEdit(font, sf::String("Username"), WindowSize.x / 2, WindowSize.y / 2 - 100, 300.f, 60.f, 150.f, 30.f, sf::Color::Blue,
