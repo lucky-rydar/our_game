@@ -19,6 +19,7 @@
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\LineEdit.cpp" />
     <ClCompile Include="Game\InterfaceManager\CurrentIMMenu.cpp" />
     <ClCompile Include="CurrentGMMenu.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\SpriteButton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\InterfaceManager\GameMenu\GameInterface.h" />
@@ -38,6 +39,7 @@
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\LineEdit.h" />
     <ClInclude Include="Game\InterfaceManager\CurrentIMMenu.h" />
     <ClInclude Include="CurrentGMMenu.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\SpriteButton.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.cfg" />

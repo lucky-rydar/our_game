@@ -156,6 +156,7 @@
     <ClCompile Include="Game\InterfaceManager\GameMenu\GameInterface.cpp" />
     <ClCompile Include="Game\InterfaceManager\GameMenu\GameScene.cpp" />
     <ClCompile Include="Game\InterfaceManager\GameMenu\PauseMenu.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\SpriteButton.cpp" />
     <ClCompile Include="Game\InterfaceManager\MainMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\Label.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\LineEdit.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="Game\InterfaceManager\GameMenu\GameInterface.h" />
     <ClInclude Include="Game\InterfaceManager\GameMenu\GameScene.h" />
     <ClInclude Include="Game\InterfaceManager\GameMenu\PauseMenu.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\SpriteButton.h" />
     <ClInclude Include="Game\InterfaceManager\MainMenu.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\Label.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\LineEdit.h" />
