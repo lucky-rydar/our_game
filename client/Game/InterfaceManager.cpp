@@ -5,7 +5,7 @@ InterfaceManager::InterfaceManager(Client *client)
 	Vector2f winSize(1280, 720);
 	eve = new Event;
 	window = new RenderWindow(VideoMode(winSize.x, winSize.y), "our_game");
-	gameMenu = new GameMenu(window);
+	gameMenu = new GameMenu(window, eve);
 	curMenu = CurrentIMMenu::Main;
 	mainMenu = new MainMenu(winSize, eve, window, &curMenu);
 	this->client = client;
