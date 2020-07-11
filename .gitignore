@@ -1,2 +1,8 @@
 /x64
 /.vs
+/client/x64
+/server/x64
+*.obj
+*.log
+*.tlog
+*.pdb

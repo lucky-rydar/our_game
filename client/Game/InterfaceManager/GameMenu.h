@@ -11,7 +11,7 @@ using namespace sf;
 class GameMenu
 {
 public:
-	GameMenu(RenderWindow *win);
+	GameMenu(RenderWindow *win, Event *eve);
 	~GameMenu();
 
 	void draw();
@@ -21,5 +21,6 @@ private:
 	GameScene* gameScene;
 	PauseMenu* pauseMenu;
 	RenderWindow* window;
+	Event* eve;
 };
 
