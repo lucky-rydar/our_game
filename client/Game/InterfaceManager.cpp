@@ -1,8 +1,8 @@
 #include "InterfaceManager.h"
+Vector2f winSize(1280, 720);
 
 InterfaceManager::InterfaceManager(Client *client)
 {
-	Vector2f winSize(1280, 720);
 	eve = new Event;
 	window = new RenderWindow(VideoMode(winSize.x, winSize.y), "our_game");
 	gameMenu = new GameMenu(window, eve);
@@ -37,6 +37,9 @@ void InterfaceManager::draw()
 		{
 			if (eve->type == Event::Closed)
 				window->close();
+
+			if (eve->type == Event::Resized)
+				window->setSize(Vector2u(winSize));
 		}
 
 		window->clear(Color::Black);

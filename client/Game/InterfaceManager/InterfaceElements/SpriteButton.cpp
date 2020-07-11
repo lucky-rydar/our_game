@@ -17,11 +17,11 @@ SpriteButton::SpriteButton(sf::Font* font, sf::String str, float x, float y, flo
 	this->setPosition(x, y);
 
 	this->ButtonText = new sf::Text(str, *font);
+	this->ButtonText->setScale(scalex, scaley);
 
 	bounds = this->ButtonText->getLocalBounds();
 
 	this->ButtonText->setOrigin((bounds.width - box.x) / 2 + bounds.left, (bounds.height - box.y) / 2 + bounds.top);
-
 	this->ButtonText->setPosition(x, y);
 }
 
@@ -47,7 +47,10 @@ void SpriteButton::update(sf::Event* eve)
 		if (eve->mouseButton.button == sf::Mouse::Left)
 		{
 			if (isOnButton(pos))
-				this->setScale(0.9, 0.9);
+			{
+				this->setScale(this->defaultScale->x - 0.1, this->defaultScale->y - 0.1);
+				this->ButtonText->setScale(this->defaultScale->x - 0.1, this->defaultScale->y - 0.1);
+			}
 		}
 	}
 
@@ -58,6 +61,7 @@ void SpriteButton::update(sf::Event* eve)
 			if (isOnButton(pos))
 			{
 				this->setScale(*this->defaultScale);
+				this->ButtonText->setScale(*this->defaultScale);
 				onButton();
 			}
 		}

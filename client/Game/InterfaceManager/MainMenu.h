@@ -6,6 +6,7 @@
 #include "InterfaceElements/LineEdit.h"
 #include "../Client.h"
 #include "CurrentIMMenu.h"
+#include "CurrentMainMenu.h"
 #include <iostream>
 
 using namespace sf;
@@ -21,10 +22,15 @@ public:
 	void update(Client *client);
 private:
 	//Button* button;
-	SpriteButton* button;
+	SpriteButton* PlayButton;
+	SpriteButton* SettingsButton;
+	SpriteButton* ExitButton;
+	SpriteButton* SettingsBack;
+
 	Label* label;
 	LineEdit*  lineEdit;
 	Font *font;
+	CurrentMainMenu* curMMenu;
 	
 	
 	Event *eve; // do not delete them in 
