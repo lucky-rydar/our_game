@@ -153,7 +153,6 @@
     <ClCompile Include="Game\Config.cpp" />
     <ClCompile Include="Game\InterfaceManager.cpp" />
     <ClCompile Include="Game\InterfaceManager\GameMenu.cpp" />
-    <ClCompile Include="Game\InterfaceManager\GameMenu\GameInterface.cpp" />
     <ClCompile Include="Game\InterfaceManager\GameMenu\GameScene.cpp" />
     <ClCompile Include="Game\InterfaceManager\GameMenu\PauseMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\MainMenu.cpp" />
@@ -173,7 +172,6 @@
     <ClInclude Include="Game\Config.h" />
     <ClInclude Include="Game\InterfaceManager.h" />
     <ClInclude Include="Game\InterfaceManager\GameMenu.h" />
-    <ClInclude Include="Game\InterfaceManager\GameMenu\GameInterface.h" />
     <ClInclude Include="Game\InterfaceManager\GameMenu\GameScene.h" />
     <ClInclude Include="Game\InterfaceManager\GameMenu\PauseMenu.h" />
     <ClInclude Include="Game\InterfaceManager\MainMenu.h" />
