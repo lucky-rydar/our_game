@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "InterfaceElements/Button.h"
+#include "InterfaceElements/SpriteButton.h"
 #include "InterfaceElements/Label.h"
 #include "InterfaceElements/LineEdit.h"
 #include "../Client.h"
@@ -19,7 +20,8 @@ public:
 	void draw();
 	void update(Client *client);
 private:
-	Button* button;
+	//Button* button;
+	SpriteButton* button;
 	Label* label;
 	LineEdit*  lineEdit;
 	Font *font;
