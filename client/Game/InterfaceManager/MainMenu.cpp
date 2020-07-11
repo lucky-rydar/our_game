@@ -7,8 +7,8 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	font = new Font;
 	font->loadFromFile(std::string("Resources\\Fonts\\lilita_one_rus.ttf"));
 
-	this->button = new Button(font, sf::String("Start"), WindowSize.x / 2, WindowSize.y / 2, 150.f, 30.f, sf::Color::Red, win);
-	this->button->setOnButtonFunc([this]() {button->setPosition(0, 0); });
+	this->button = new Button(font, sf::String("Play"), WindowSize.x / 2, WindowSize.y / 2, 150.f, 30.f, sf::Color::Red, win);
+	this->button->setOnButtonFunc([curMenu]() {*curMenu = CurrentIMMenu::Game; });
 
 	this->label = new Label(font, sf::String("our_game"), WindowSize.x / 2, WindowSize.y, sf::Color::White);
 	this->lineEdit = new LineEdit(font, sf::String("Username"), WindowSize.x / 2, WindowSize.y / 2 - 100, 300.f, 60.f, 150.f, 30.f, sf::Color::Blue,
