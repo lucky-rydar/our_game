@@ -19,6 +19,7 @@
     <ClCompile Include="CurrentGMMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\SpriteButton.cpp" />
     <ClCompile Include="Game\InterfaceManager\CurrentMainMenu.cpp" />
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\CheckBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\InterfaceManager\GameMenu\GameScene.h" />
@@ -38,6 +39,7 @@
     <ClInclude Include="CurrentGMMenu.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\SpriteButton.h" />
     <ClInclude Include="Game\InterfaceManager\CurrentMainMenu.h" />
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\CheckBox.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.cfg" />

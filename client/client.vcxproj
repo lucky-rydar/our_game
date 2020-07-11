@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game\InterfaceManager\InterfaceElements\CheckBox.cpp" />
     <ClCompile Include="CurrentGMMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\CurrentMainMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\CurrentIMMenu.cpp" />
@@ -162,6 +163,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game\InterfaceManager\InterfaceElements\CheckBox.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="CurrentGMMenu.h" />
     <ClInclude Include="Game\InterfaceManager\CurrentMainMenu.h" />
     <ClInclude Include="Game\InterfaceManager\CurrentIMMenu.h" />

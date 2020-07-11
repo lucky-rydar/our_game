@@ -4,6 +4,7 @@
 #include "InterfaceElements/SpriteButton.h"
 #include "InterfaceElements/Label.h"
 #include "InterfaceElements/LineEdit.h"
+#include "InterfaceElements/CheckBox.h"
 #include "../Client.h"
 #include "CurrentIMMenu.h"
 #include "CurrentMainMenu.h"
@@ -31,8 +32,7 @@ private:
 	LineEdit*  lineEdit;
 	Font *font;
 	CurrentMainMenu* curMMenu;
-	
-	
+
 	Event *eve; // do not delete them in 
 	RenderWindow *window; // destructor
 };
