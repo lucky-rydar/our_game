@@ -58,11 +58,18 @@ void SpriteLineEdit::update(sf::Event* eve)
 	}
 	else if (eve->type == sf::Event::TextEntered && eve->text.unicode >= 32 && eve->text.unicode <= 126)
 		this->write(*eve);
+
+	if (this->input->getSize() > 12)
+	{
+		this->input->erase(this->input->getSize() - 1, static_cast<size_t>(this->input->getSize() - 11));
+		this->text->setString(*this->input);
+	}
 }
 
 void SpriteLineEdit::backspace()
 {
-	this->input->erase(this->input->getSize());
+	if (this->input->getSize() != 0)
+	this->input->erase(this->input->getSize() - 1);
 	this->text->setString(*this->input);
 }
 
