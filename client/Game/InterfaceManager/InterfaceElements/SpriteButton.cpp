@@ -5,14 +5,17 @@ SpriteButton::SpriteButton(sf::Font* font, sf::String str, float x, float y, flo
 	this->wnd = wnd;
 	this->texture = texture;
 
-	this->setScale(scalex, scaley);
 	this->setTexture(this->texture);
-	this->defaultScale = new sf::Vector2f(scalex, scaley);
 
 	sf::FloatRect bounds;
 	const sf::Vector2f box(
 		this->getTexture()->getSize().x * this->getScale().x,
 		this->getTexture()->getSize().y * this->getScale().y);
+
+	this->setOrigin(this->getLocalBounds().width / 2, this->getLocalBounds().height / 2);
+
+	this->setScale(scalex, scaley);
+	this->defaultScale = new sf::Vector2f(scalex, scaley);
 
 	this->setPosition(x, y);
 
@@ -21,7 +24,7 @@ SpriteButton::SpriteButton(sf::Font* font, sf::String str, float x, float y, flo
 
 	bounds = this->ButtonText->getLocalBounds();
 
-	this->ButtonText->setOrigin((bounds.width - box.x) / 2 + bounds.left, (bounds.height - box.y) / 2 + bounds.top);
+	this->ButtonText->setOrigin(bounds.width / 2, bounds.height / 2 + 7);
 	this->ButtonText->setPosition(x, y);
 }
 

@@ -21,13 +21,13 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	this->SettingsButton = new SpriteButton(font, sf::String("Settings"), WindowSize.x / 2, WindowSize.y / 2 - 100, 1.f, 1.f, texture, win);
 	this->SettingsButton->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Settings; });
 	
-	this->SettingsBack = new SpriteButton(font, sf::String("Back"), WindowSize.x / 20, WindowSize.y / 1.2, 1.f, 1.f, texture, win);
+	this->SettingsBack = new SpriteButton(font, sf::String("Back"), WindowSize.x / 8, WindowSize.y / 1.1, 1.f, 1.f, texture, win);
 	this->SettingsBack->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Main; });
 
 	this->ExitButton = new SpriteButton(font, sf::String("Exit"), WindowSize.x / 2, WindowSize.y / 2, 1.f, 1.f, texture, win);
 	this->ExitButton->setOnButtonFunc([win]() {win->close(); });
 
-	this->label = new Label(font, sf::String("our_game"), WindowSize.x / 2 + 40, WindowSize.y / 8, sf::Color::White);
+	this->label = new Label(font, sf::String("our_game"), WindowSize.x / 2, WindowSize.y / 8 - 25, sf::Color::White);
 
 	this->lineEdit = new LineEdit(font, sf::String("Username"), WindowSize.x / 2, WindowSize.y / 2 - 100, 300.f, 60.f, 150.f, 30.f, sf::Color::Blue,
 		sf::Color::Black, sf::Color::White);
@@ -41,7 +41,7 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	this->Vsync->SetNonCheckFunc([win]() {win->setVerticalSyncEnabled(false); });
 
 	texture.loadFromFile("Resources\\Sprites\\Interface\\Button 3.png");
-	this->UsrName = new SpriteLineEdit(font, "Username", texture, WindowSize.x / 2, WindowSize.y / 2, 1.f, 1.f, win);
+	this->UsrName = new SpriteLineEdit(font, "Username", texture, WindowSize.x / 2, WindowSize.y / 9, 1.f, 0.75, win);
 
 	this->eve = eve;
 }
