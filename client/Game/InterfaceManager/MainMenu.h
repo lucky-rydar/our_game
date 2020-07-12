@@ -34,6 +34,9 @@ private:
 	CheckBox* Vsync;
 	Label* Vsynclabel;
 
+	CheckBox* FullScreen;
+	Label* FullScreenlabel;
+
 	Label* label;
 	LineEdit*  lineEdit;
 	Font *font;

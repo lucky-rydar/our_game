@@ -40,6 +40,23 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	this->Vsync->SetOnCheckFunc([win]() {win->setVerticalSyncEnabled(true); });
 	this->Vsync->SetNonCheckFunc([win]() {win->setVerticalSyncEnabled(false); });
 
+	this->FullScreenlabel = new Label(font, "FullScreen", WindowSize.x / 1.3, WindowSize.y / 5, sf::Color::White);
+
+	this->FullScreen = new CheckBox(texture, texture2, WindowSize.x / 1.15, WindowSize.y / 5, 0.75, 0.75, win);
+	this->FullScreen->SetOnCheckFunc([win]() mutable
+		{
+			sf::VideoMode mode;
+			mode.height = mode.getFullscreenModes()[1].height;
+			mode.width = mode.getFullscreenModes()[1].width;
+			delete win;
+			win = new sf::RenderWindow(mode, "our_game", sf::Style::Fullscreen);
+		});
+	this->FullScreen->SetNonCheckFunc([win]() mutable
+		{
+			delete win;
+			win = new sf::RenderWindow(sf::VideoMode(1280, 720), "our_game");
+		});
+
 	texture.loadFromFile("Resources\\Sprites\\Interface\\Button 3.png");
 	this->UsrName = new SpriteLineEdit(font, "Username", texture, WindowSize.x / 2, WindowSize.y / 9, 1.f, 0.75, win);
 
@@ -77,6 +94,9 @@ void MainMenu::draw()
 		this->Vsync->draw();
 		this->Vsynclabel->draw(window);
 
+		this->FullScreen->draw();
+		this->FullScreenlabel->draw(window);
+
 		this->UsrName->draw();
 	}
 	
@@ -96,6 +116,7 @@ void MainMenu::update(Client* client)
 		this->SettingsBack->update(eve);
 
 		this->Vsync->update(eve);
+		this->FullScreen->update(eve);
 
 		this->UsrName->update(eve);
 	}
