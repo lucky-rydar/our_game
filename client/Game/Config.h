@@ -10,11 +10,13 @@ class Config
 public:
 	Config(string fileName = "config.cfg");
 	~Config();
-	void loadConfig();
+	
 	string getParam(string key);
 
 private:
+	void loadConfig();
+
 	fstream configFile;
-	map<string, string> *params;
+	map<string, string> params;
 };
 

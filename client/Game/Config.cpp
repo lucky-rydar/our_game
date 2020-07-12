@@ -2,7 +2,7 @@
 
 Config::Config(string fileName)
 {
-	this->params = new map<string, string>();
+	
 	this->configFile = fstream();
 
 	configFile.open(fileName);
@@ -11,11 +11,12 @@ Config::Config(string fileName)
 		ofstream newFile("config.cfg");
 		return;
 	}
+	loadConfig();
 }
 
 Config::~Config()
 {
-	delete this->params;
+	
 }
 
 void Config::loadConfig()
@@ -26,11 +27,11 @@ void Config::loadConfig()
 	while (!configFile.eof())
 	{
 		configFile >> key >> value;
-		params->at(key) = value;
+		params[key] = value;
 	}
 }
 
 string Config::getParam(string key)
 {
-	return params->at(key);
+	return params[key];
 }

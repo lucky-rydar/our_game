@@ -12,10 +12,11 @@ public:
 	
 	void receive();
 
-	void toMap();
-private:
-	Packet pack;
 	map<string, string> map_data;
+private:
+	void toMap();
+	
+	Packet pack;
 	UdpSocket socket;
 
 	Config* cfg;

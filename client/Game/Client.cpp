@@ -23,5 +23,11 @@ void Client::update()
 
 void Client::addData(Instruction instruction)
 {
-	
+	upLoader->vector_data.push_back(instruction);
+}
+
+map<string, string>& Client::getData()
+{
+	return downLoader->map_data;
+	// TODO: вставьте здесь оператор return
 }

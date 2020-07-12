@@ -18,7 +18,7 @@ public:
 	void update();
 
 	void addData(Instruction instruction);
-	map<string, string> getData();
+	map<string, string>& getData();
 
 private:
 	DownLoader *downLoader;

@@ -4,7 +4,8 @@ DownLoader::DownLoader(Config* cfg)
 {
 	this->cfg = cfg;
 
-	port = (unsigned short)stoi(cfg->getParam("port"));
+	string port_string = cfg->getParam("port");
+	port = (unsigned short)stoi(port_string);
 }
 
 DownLoader::~DownLoader()
