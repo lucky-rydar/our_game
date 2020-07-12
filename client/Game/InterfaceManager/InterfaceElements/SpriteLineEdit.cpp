@@ -22,7 +22,7 @@ SpriteLineEdit::SpriteLineEdit(sf::Font* font, sf::String str, sf::Texture textu
 
 	this->setPosition(x, y);
 	
-	this->input = new sf::String;
+	this->input = new sf::String();
 }
 
 SpriteLineEdit::~SpriteLineEdit()
@@ -53,25 +53,23 @@ void SpriteLineEdit::update(sf::Event* eve)
 		if (eve->key.code == sf::Keyboard::Escape)
 			isSelected = false;
 		else if (eve->key.code == sf::Keyboard::BackSpace)
-			backspace();
-		else
-		{
-				write(*eve);
-		}
+			this->backspace();
 
 	}
+	else if (eve->type == sf::Event::TextEntered && eve->text.unicode >= 32 && eve->text.unicode <= 126)
+		this->write(*eve);
 }
 
 void SpriteLineEdit::backspace()
 {
-	this->input--;
-	this->text->setString(*input);
+	this->input->erase(this->input->getSize());
+	this->text->setString(*this->input);
 }
 
 void SpriteLineEdit::write(sf::Event eve)
 {
-	this->input += eve.text.unicode;
-	this->text->setString(*input);
+	*this->input += static_cast<wchar_t>(eve.text.unicode);
+	this->text->setString(*this->input);
 }
 
 bool SpriteLineEdit::isClicked(sf::Vector2i pos)
