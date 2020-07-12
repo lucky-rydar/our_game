@@ -1,17 +1,25 @@
 #pragma once
 #include <SFML/Network.hpp>
+#include "../Config.h"
 
 using namespace sf;
 
 class DownLoader
 {
 public:
-	DownLoader(Packet* pack);
+	DownLoader(Config* cfg);
 	~DownLoader();
 	
 	void receive();
+
+	void toMap();
 private:
-	Packet* pack;
-	UdpSocket *socket;
+	Packet pack;
+	map<string, string> map_data;
+	UdpSocket socket;
+
+	Config* cfg;
+	IpAddress address;
+	unsigned short port;
 };
 

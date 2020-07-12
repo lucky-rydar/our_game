@@ -1,13 +1,11 @@
 #include "Client.h"
 
 Client::Client(Config* cfg)
-{
-	this->packToReceive = new Packet();
-	this->packToSend = new Packet();
-	
-	this->downLoader = new DownLoader(packToReceive);
-	this->upLoader = new UpLoader(packToSend);
+{	
 	this->config = cfg;
+	this->downLoader = new DownLoader(cfg);
+	this->upLoader = new UpLoader(cfg);
+	
 }
 
 Client::~Client()
@@ -21,4 +19,9 @@ void Client::update()
 	downLoader->receive();
 
 	upLoader->send();
+}
+
+void Client::addData(Instruction instruction)
+{
+	
 }

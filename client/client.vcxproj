@@ -163,6 +163,7 @@
     <ClCompile Include="Game\InterfaceManager\MainMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\Label.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\LineEdit.cpp" />
+    <ClCompile Include="Game\Client\Instruction.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\SpriteLineEdit.cpp" />
   </ItemGroup>
@@ -190,6 +191,7 @@
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\SpriteLineEdit.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="Game\Client\Instruction.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.cfg" />

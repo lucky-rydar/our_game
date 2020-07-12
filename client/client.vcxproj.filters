@@ -21,6 +21,7 @@
     <ClCompile Include="Game\InterfaceManager\CurrentMainMenu.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\CheckBox.cpp" />
     <ClCompile Include="Game\InterfaceManager\InterfaceElements\SpriteLineEdit.cpp" />
+    <ClCompile Include="Game\Client\Instruction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\InterfaceManager\GameMenu\GameScene.h" />
@@ -42,6 +43,7 @@
     <ClInclude Include="Game\InterfaceManager\CurrentMainMenu.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\CheckBox.h" />
     <ClInclude Include="Game\InterfaceManager\InterfaceElements\SpriteLineEdit.h" />
+    <ClInclude Include="Game\Client\Instruction.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.cfg" />
