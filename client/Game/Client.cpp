@@ -29,5 +29,4 @@ void Client::addData(Instruction instruction)
 map<string, string>& Client::getData()
 {
 	return downLoader->map_data;
-	// TODO: вставьте здесь оператор return
 }
