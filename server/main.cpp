@@ -1,10 +1,9 @@
 #include <iostream>
+#include "CLI/CLI.h"
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	cout << "Hello server" << endl;
-	system("pause");
-	return 0;
+	CLI cli;
 }
