@@ -6,7 +6,7 @@
 class Network
 {
 public:
-	Network();
+	Network(Config* cfg);
 	~Network();
 
 
@@ -15,5 +15,7 @@ private:
 	DownLoader *downLoader;
 	UpLoader* upLoader;
 
+	Config* config;
+	UdpSocket* socket;
 };
 

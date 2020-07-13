@@ -8,12 +8,11 @@ using namespace std;
 
 class DownLoader
 {
-private:
+public:
 	DownLoader(UdpSocket* socket, Config* cfg);
-	~DownLoader();
 
 	void receive();
-public:
+private:
 	void toMap();
 	
 	Packet pack;

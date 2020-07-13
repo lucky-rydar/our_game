@@ -6,11 +6,6 @@ DownLoader::DownLoader(UdpSocket* socket, Config* cfg)
 	this->config = cfg;
 }
 
-DownLoader::~DownLoader()
-{
-	delete socket;
-}
-
 void DownLoader::receive()
 {
 
