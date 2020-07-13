@@ -17,6 +17,10 @@ CLI::~CLI()
 
 void CLI::get_line()
 {
+	cout << start_line;
+	getline(cin, cur_line);
+
+	//TODO: calling parser to parse data and call the func we need
 }
 
 
