@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <regex>
 #include "Parser/Parser.h"
 #include "Parser/Config.h"
 
