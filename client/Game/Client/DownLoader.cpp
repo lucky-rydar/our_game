@@ -8,10 +8,6 @@ DownLoader::DownLoader(Config* cfg)
 	port = (unsigned short)stoi(port_string);
 }
 
-DownLoader::~DownLoader()
-{
-}
-
 void DownLoader::receive()
 {
 	socket.receive(this->pack, address, port);
