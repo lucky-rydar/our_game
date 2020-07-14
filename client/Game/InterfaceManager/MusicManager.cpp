@@ -14,7 +14,7 @@ void MusicManager::startPlaying() // Use this func in Thread and to stop it use 
 {
 	while (true)
 	{
-		for (int i = 0; track.openFromFile(path + to_string(i) + ".wav"); i++)
+		for (int i = 0; track.openFromFile(path + to_string(i) + ".ogg"); i++)
 		{
 			track.play();
 			this_thread::sleep_for(chrono::milliseconds(track.getDuration().asMilliseconds()));
