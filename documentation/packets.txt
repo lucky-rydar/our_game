@@ -1,0 +1,14 @@
+to_server_packet:
+	message_type: player_event|registrartion	//in string
+	if(player_event):
+		login: <string>
+		password: <string>
+		// TODO: other data about event
+	else if(registration):
+		email: <string>
+		login: <string>
+		password: <string>
+to_client_packet:
+	// TODO: here we are sending everything we can
+			
+	
