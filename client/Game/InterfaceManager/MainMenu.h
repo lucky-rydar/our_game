@@ -28,6 +28,9 @@ private:
 	SpriteButton* SettingsButton;
 	SpriteButton* ExitButton;
 	SpriteButton* SettingsBack;
+	SpriteButton* SettingsGeneral;
+	SpriteButton* SettingsGraphics;
+	SpriteButton* SettingsSounds;
 
 	SpriteLineEdit* UsrName;
 

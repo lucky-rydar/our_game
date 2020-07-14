@@ -2,6 +2,8 @@
 enum class CurrentMainMenu
 {
 	Main,
-	Settings
+	Settings, //General settings
+	SettingsGraphics,
+	SettingsSound
 };
 

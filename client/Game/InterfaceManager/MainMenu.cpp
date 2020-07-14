@@ -24,6 +24,15 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	this->SettingsBack = new SpriteButton(font, sf::String("Back"), WindowSize.x / 8, WindowSize.y / 1.1, 1.f, 1.f, texture, win);
 	this->SettingsBack->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Main; });
 
+	this->SettingsGeneral = new SpriteButton(font, sf::String("General"), WindowSize.x / 8, WindowSize.y / 8, 1.f, 1.f, texture, win);
+	this->SettingsGeneral->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Settings; });
+
+	this->SettingsGraphics = new SpriteButton(font, sf::String("Graphics"), WindowSize.x / 8, WindowSize.y / 4, 1.f, 1.f, texture, win);
+	this->SettingsGraphics->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::SettingsGraphics; });
+
+	this->SettingsSounds = new SpriteButton(font, sf::String("Sounds"), WindowSize.x / 8, WindowSize.y / 2.7, 1.f, 1.f, texture, win);
+	this->SettingsSounds->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::SettingsSound; });
+
 	this->ExitButton = new SpriteButton(font, sf::String("Exit"), WindowSize.x / 2, WindowSize.y / 2, 1.f, 1.f, texture, win);
 	this->ExitButton->setOnButtonFunc([win]() {win->close(); });
 
@@ -90,16 +99,32 @@ void MainMenu::draw()
 	else if (*this->curMMenu == CurrentMainMenu::Settings)
 	{
 		this->SettingsBack->draw();
+		this->SettingsGeneral->draw();
+		this->SettingsGraphics->draw();
+		this->SettingsSounds->draw();
+
+		this->UsrName->draw();
+	}
+	else if (*this->curMMenu == CurrentMainMenu::SettingsGraphics)
+	{
+		this->SettingsBack->draw();
+		this->SettingsGeneral->draw();
+		this->SettingsGraphics->draw();
+		this->SettingsSounds->draw();
 
 		this->Vsync->draw();
 		this->Vsynclabel->draw(window);
 
 		this->FullScreen->draw();
 		this->FullScreenlabel->draw(window);
-
-		this->UsrName->draw();
 	}
-	
+	else if (*this->curMMenu == CurrentMainMenu::SettingsSound)
+	{
+		this->SettingsBack->draw();
+		this->SettingsGeneral->draw();
+		this->SettingsGraphics->draw();
+		this->SettingsSounds->draw();
+	}
 }
 
 void MainMenu::update(Client* client)
@@ -114,11 +139,28 @@ void MainMenu::update(Client* client)
 	else if (*this->curMMenu == CurrentMainMenu::Settings)
 	{
 		this->SettingsBack->update(eve);
+		this->SettingsGeneral->update(eve);
+		this->SettingsGraphics->update(eve);
+		this->SettingsSounds->update(eve);
+
+		this->UsrName->update(eve);
+	}
+	else if (*this->curMMenu == CurrentMainMenu::SettingsGraphics)
+	{
+		this->SettingsBack->update(eve);
+		this->SettingsGeneral->update(eve);
+		this->SettingsGraphics->update(eve);
+		this->SettingsSounds->update(eve);
 
 		this->Vsync->update(eve);
 		this->FullScreen->update(eve);
-
-		this->UsrName->update(eve);
+	}
+	else if (*this->curMMenu == CurrentMainMenu::SettingsSound)
+	{
+		this->SettingsBack->update(eve);
+		this->SettingsGeneral->update(eve);
+		this->SettingsGraphics->update(eve);
+		this->SettingsSounds->update(eve);
 	}
 }
 
