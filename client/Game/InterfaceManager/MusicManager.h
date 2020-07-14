@@ -9,7 +9,7 @@ using namespace std;
 class MusicManager 
 {
 public:
-	MusicManager(string path = "\\..\\..\\Resources\\Music");
+	MusicManager(string path = "Resources\\Music\\");
 
 	void setVolume(float volume);
 	void startPlaying();

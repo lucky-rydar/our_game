@@ -10,6 +10,7 @@
 #include "CurrentIMMenu.h"
 #include "CurrentMainMenu.h"
 #include <iostream>
+#include "MusicManager.h"
 
 using namespace sf;
 using namespace std;
@@ -33,12 +34,12 @@ private:
 	SpriteButton* SettingsSounds;
 
 	SpriteLineEdit* UsrName;
-
 	CheckBox* Vsync;
 	Label* Vsynclabel;
-
 	CheckBox* FullScreen;
 	Label* FullScreenlabel;
+	
+	MusicManager musicManager;
 
 	Label* label;
 	LineEdit*  lineEdit;

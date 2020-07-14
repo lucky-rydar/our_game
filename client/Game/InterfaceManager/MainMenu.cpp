@@ -2,6 +2,11 @@
 
 MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, CurrentIMMenu* curMenu)
 {
+	musicManager.setVolume(100);
+	thread th(&MusicManager::startPlaying, &musicManager);
+	th.detach();
+	
+	
 	this->window = win;
 	this->curMMenu = new CurrentMainMenu;
 	*this->curMMenu = CurrentMainMenu::Main;
