@@ -13,6 +13,7 @@
     <ClCompile Include="CLI\GameData\MapData.cpp" />
     <ClCompile Include="CLI\GameData\PlayersData.cpp" />
     <ClCompile Include="CLI\GameData\Location.cpp" />
+    <ClCompile Include="CLI\GameData\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLI\Network\DownLoader.h" />
@@ -26,5 +27,6 @@
     <ClInclude Include="CLI\GameData\MapData.h" />
     <ClInclude Include="CLI\GameData\PlayersData.h" />
     <ClInclude Include="CLI\GameData\Location.h" />
+    <ClInclude Include="CLI\GameData\Player.h" />
   </ItemGroup>
 </Project>
