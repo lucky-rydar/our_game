@@ -36,7 +36,7 @@ void CheckBox::update(sf::Event* eve)
 {
 	sf::Mouse mouse;
 	auto pos = mouse.getPosition(*wnd);
-
+	
 	if (eve->type == sf::Event::MouseButtonPressed)
 	{
 		if (eve->mouseButton.button == sf::Mouse::Left)
