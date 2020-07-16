@@ -1,4 +1,5 @@
 #pragma once
+#pragma warning(disable: 4244)
 #include <SFML/Graphics.hpp>
 #include "InterfaceElements/Button.h"
 #include "InterfaceElements/SpriteButton.h"
