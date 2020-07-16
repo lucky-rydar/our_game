@@ -14,6 +14,9 @@ public:
 	void setVolume(float volume);
 	void startPlaying();
 private:
+	void countFilesIn(string path);
+
+	int numOfFiles;
 	Music track;
 	string path;
 };
