@@ -39,30 +39,33 @@ void SpriteLineEdit::draw()
 
 void SpriteLineEdit::update(sf::Event* eve)
 {
-	if (eve->type == sf::Event::MouseButtonReleased)
+	while (wnd->pollEvent(*eve))
 	{
-		if (eve->mouseButton.button == sf::Mouse::Left && isClicked(sf::Vector2i(eve->mouseButton.x, eve->mouseButton.y)))
-			isSelected = true;
-		if (eve->mouseButton.button == sf::Mouse::Left && !isClicked(sf::Vector2i(eve->mouseButton.x, eve->mouseButton.y)))
-			isSelected = false;
-		if (eve->mouseButton.button == sf::Mouse::Right && !isClicked(sf::Vector2i(eve->mouseButton.x, eve->mouseButton.y)))
-			isSelected = false;
-	}
-	if (eve->type == sf::Event::KeyReleased)
-	{
-		if (eve->key.code == sf::Keyboard::Escape)
-			isSelected = false;
-		else if (eve->key.code == sf::Keyboard::BackSpace)
-			this->backspace();
+		if (eve->type == sf::Event::MouseButtonReleased)
+		{
+			if (eve->mouseButton.button == sf::Mouse::Left && isClicked(sf::Vector2i(eve->mouseButton.x, eve->mouseButton.y)))
+				isSelected = true;
+			if (eve->mouseButton.button == sf::Mouse::Left && !isClicked(sf::Vector2i(eve->mouseButton.x, eve->mouseButton.y)))
+				isSelected = false;
+			if (eve->mouseButton.button == sf::Mouse::Right && !isClicked(sf::Vector2i(eve->mouseButton.x, eve->mouseButton.y)))
+				isSelected = false;
+		}
+		if (eve->type == sf::Event::KeyReleased)
+		{
+			if (eve->key.code == sf::Keyboard::Escape)
+				isSelected = false;
+			else if (eve->key.code == sf::Keyboard::BackSpace)
+				this->backspace();
 
-	}
-	else if (eve->type == sf::Event::TextEntered && eve->text.unicode >= 32 && eve->text.unicode <= 126)
-		this->write(*eve);
+		}
+		else if (eve->type == sf::Event::TextEntered && eve->text.unicode >= 32 && eve->text.unicode <= 126)
+			this->write(*eve);
 
-	if (this->input->getSize() > 12)
-	{
-		this->input->erase(this->input->getSize() - 1, static_cast<size_t>(this->input->getSize() - 11));
-		this->text->setString(*this->input);
+		if (this->input->getSize() > 12)
+		{
+			this->input->erase(this->input->getSize() - 1, static_cast<size_t>(this->input->getSize() - 11));
+			this->text->setString(*this->input);
+		}
 	}
 }
 
