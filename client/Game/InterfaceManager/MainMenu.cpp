@@ -3,8 +3,7 @@
 MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, CurrentIMMenu* curMenu)
 {
 	musicManager.setVolume(100);
-	thread th(&MusicManager::startPlaying, &musicManager);
-	th.detach();
+	musicManager.play();
 	
 	
 	this->window = win;
@@ -21,13 +20,13 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	texture.loadFromFile("Resources\\Sprites\\Interface\\Button 1.png");
 
 	this->PlayButton = new SpriteButton(font, sf::String("Play"), WindowSize.x / 2, WindowSize.y / 2 - 200, 1.f, 1.f, texture, win);
-	this->PlayButton->setOnButtonFunc([curMenu]() {*curMenu = CurrentIMMenu::Game; });
+	this->PlayButton->setOnButtonFunc([this, curMenu]() {*curMenu = CurrentIMMenu::Game; });
 
 	this->SettingsButton = new SpriteButton(font, sf::String("Settings"), WindowSize.x / 2, WindowSize.y / 2 - 100, 1.f, 1.f, texture, win);
-	this->SettingsButton->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Settings; });
+	this->SettingsButton->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Settings; musicManager.stop(); });
 	
 	this->SettingsBack = new SpriteButton(font, sf::String("Back"), WindowSize.x / 8, WindowSize.y / 1.1, 1.f, 1.f, texture, win);
-	this->SettingsBack->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Main; });
+	this->SettingsBack->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Main; musicManager.play(); });
 
 	this->SettingsGeneral = new SpriteButton(font, sf::String("General"), WindowSize.x / 8, WindowSize.y / 8, 1.f, 1.f, texture, win);
 	this->SettingsGeneral->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::Settings; });
