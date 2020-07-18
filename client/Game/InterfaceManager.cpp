@@ -5,6 +5,7 @@ InterfaceManager::InterfaceManager(Client *client)
 {
 	eve = new Event;
 	window = new RenderWindow(VideoMode(winSize.x, winSize.y), "our_game");
+		
 	gameMenu = new GameMenu(window, eve);
 	curMenu = CurrentIMMenu::Main;
 	mainMenu = new MainMenu(winSize, eve, window, &curMenu);
