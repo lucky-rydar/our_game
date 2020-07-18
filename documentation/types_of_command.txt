@@ -1,0 +1,3 @@
+map gen <width> <height> // generates new map
+map print // prints current map
+map save <image name> // saves map to image
