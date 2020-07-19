@@ -33,16 +33,13 @@ void MusicManager::stop()
 
 void MusicManager::countFilesIn(string path)
 {
-	InputSoundFile file;
-	string format = ".ogg";
-	int tempCount = 0;
+	auto dirIter = std::filesystem::directory_iterator(path);
 
-	for (int i = 1; file.openFromFile(path + to_string(i) + format); i++)
-	{
-		tempCount++;
-	}
-
-	this->numOfFiles = tempCount;
+	this->numOfFiles = (unsigned int)std::count_if(
+		begin(dirIter),
+		end(dirIter),
+		[](auto& entry) { return entry.is_regular_file(); }
+	);
 }
 
 void MusicManager::playing()

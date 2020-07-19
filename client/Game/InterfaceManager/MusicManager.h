@@ -2,6 +2,8 @@
 #include <SFML/Audio.hpp>
 #include <string>
 #include <thread>
+#include <iostream>
+#include <filesystem>
 
 using namespace sf;
 using namespace std;
@@ -21,7 +23,7 @@ private:
 	void countFilesIn(string path);
 
 	bool canPlay;
-	int numOfFiles;
+	unsigned int numOfFiles;
 	Thread *th;
 	Music track;
 	string path;
