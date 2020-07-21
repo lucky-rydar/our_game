@@ -1,5 +1,6 @@
 #include <iostream>
 #include "CLI/CLI.h"
+#include "CLI/GameData/MapGenerator.h"
 
 using namespace std;
 

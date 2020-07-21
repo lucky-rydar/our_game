@@ -9,7 +9,6 @@ public:
 	MapData(vector<vector<short>> data);
 	
 	void setSize(int size);
-	vector<vector<short>> getMap();
 	void generateMap(); // TODO
 
 private:
