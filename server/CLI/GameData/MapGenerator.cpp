@@ -2,6 +2,8 @@
 
 MapGenerator::MapGenerator()
 {
+    srand(time(0));
+
     this->CHUNK_X = 0;
     this->CHUNK_Z = 0;
 }
@@ -10,6 +12,7 @@ vector<vector<float>> MapGenerator::gen(int size, int base_height)
 {
     if (size % 2 == 0)
         size++;
+    base_height *= -1;
 
     vector<vector<float>> map;
 
@@ -22,34 +25,35 @@ vector<vector<float>> MapGenerator::gen(int size, int base_height)
     this->CHUNK_X = size;
     this->CHUNK_Z = size;
 
-    int** arr;
-    arr = new int* [size];
+    
+    array_map = new int* [size];
     for (int i = 0; i < size; i++)
     {
-        arr[i] = new int[size];
+        array_map[i] = new int[size];
     }
 
-    arr[0][0] = random(base_height);
-    arr[0][size - 1] = random(base_height);
-    arr[size - 1][size - 1] = random(base_height);
-    arr[size - 1][0] = random(base_height);
+    array_map[0][0] = random(base_height);
+    array_map[0][size - 1] = random(base_height);
+    array_map[size - 1][size - 1] = random(base_height);
+    array_map[size - 1][0] = random(base_height);
 
-    diamondSquare(arr, size);
-
+    diamondSquare(array_map, size);
+    normalize(base_height, size);
+     
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
         {
-            map[i][j] = arr[i][j];
+            map[i][j] = array_map[i][j];
         }
 
     }
 
     for (int i = 0; i < size; i++)
     {
-        delete[] arr[i];
+        delete[] array_map[i];
     }
-    delete[] arr;
+    delete[] array_map;
 
 
     return map;
@@ -136,6 +140,20 @@ void MapGenerator::diamondStep(int** Array, int x, int z, int reach)
     avg += random(reach);
     avg /= count;
     Array[x][z] = (int)avg;
+}
+
+void MapGenerator::normalize(int range, int size)
+{
+    for (size_t i = 0; i < size; i++)
+    {
+        for (size_t j = 0; j < size; j++)
+        {
+            if (array_map[i][j] > range * (-1))
+                array_map[i][j] = range * (-1);
+            else if (array_map[i][j] < range)
+                array_map[i][j] = range;
+        }
+    }
 }
 
 float MapGenerator::random(int range)
