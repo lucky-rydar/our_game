@@ -2,11 +2,12 @@
 
 Parser::Parser()
 {
-
+	this->funcs = new BaseServerFuncs();
 }
 
 Parser::~Parser()
 {
+	delete funcs;
 }
 
 void Parser::parse(string line)
