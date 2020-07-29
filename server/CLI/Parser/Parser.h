@@ -1,7 +1,7 @@
 #pragma once
 #include <regex>
 #include <string>
-#include "LineType.h"
+#include <iostream>
 
 using namespace std;
 
@@ -11,11 +11,10 @@ public:
 	Parser();
 	~Parser();
 
-	LineType typeOfLine();
+	void parse(string line);
 
 
 private:
 	string line;
-	LineType type;
 };
 

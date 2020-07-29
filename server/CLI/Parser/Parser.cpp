@@ -2,16 +2,24 @@
 
 Parser::Parser()
 {
-	this->type = LineType::Null;
+
 }
 
 Parser::~Parser()
 {
 }
 
-LineType Parser::typeOfLine()
+void Parser::parse(string line)
 {
-	regex map_gen("");
-	
-	return LineType();
+	regex templ("(?:(\\w+)\\s)(?:(\\w+)\\s)?(.+)\\s?");
+	cmatch found;
+
+	if (!regex_match(line.c_str(), found, templ))
+	{
+		cout << "Error command" << endl;
+		return;
+	}
+
 }
+
+

@@ -150,7 +150,6 @@
     <ClCompile Include="CLI\Network\DownLoader.cpp" />
     <ClCompile Include="CLI\Network\DataBase.cpp" />
     <ClCompile Include="CLI\Parser\Config.cpp" />
-    <ClCompile Include="CLI\Parser\LineType.cpp" />
     <ClCompile Include="CLI\GameData\Location.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CLI\Network\UpLoader.cpp" />
@@ -168,7 +167,6 @@
     <ClInclude Include="CLI\Network\DataBase.h" />
     <ClInclude Include="CLI\Parser\Parser.h" />
     <ClInclude Include="CLI\Parser\Config.h" />
-    <ClInclude Include="CLI\Parser\LineType.h" />
     <ClInclude Include="CLI\GameData\MapData.h" />
     <ClInclude Include="CLI\GameData\PlayersData.h" />
     <ClInclude Include="CLI\GameData\Location.h" />

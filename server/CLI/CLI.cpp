@@ -21,6 +21,7 @@ void CLI::get_line()
 	getline(cin, cur_line);
 
 	//TODO: calling parser to parse data and call the func we need
+	parser->parse(cur_line);
 }
 
 
