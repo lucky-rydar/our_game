@@ -9,7 +9,7 @@ void BaseServerFuncs::call(string func, string args)
 {
 	if (functions.find(func) == functions.end())
 	{
-		cout << "Error" << endl;
+		cout << "There is no such command" << endl;
 	}
 	else
 	{

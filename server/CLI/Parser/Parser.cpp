@@ -12,7 +12,7 @@ Parser::~Parser()
 
 void Parser::parse(string line)
 {
-	regex templ("(?:(\\w+)\\s)(?:(\\w+)\\s)?(.+)\\s?");
+	regex templ("(?:(\\w+)\\s)(.+)\\s?");
 	cmatch found;
 
 	if (!regex_match(line.c_str(), found, templ))
@@ -20,6 +20,8 @@ void Parser::parse(string line)
 		cout << "Error syntax/command" << endl;
 		return;
 	}
+
+	funcs->call(found[1], found[2]);
 
 }
 
