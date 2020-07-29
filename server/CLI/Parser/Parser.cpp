@@ -17,7 +17,7 @@ void Parser::parse(string line)
 
 	if (!regex_match(line.c_str(), found, templ))
 	{
-		cout << "Error command" << endl;
+		cout << "Error syntax/command" << endl;
 		return;
 	}
 
