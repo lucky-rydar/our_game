@@ -1,3 +1,3 @@
-map gen <size> // generates new map // only one param because it is square
-map print // prints current map
-map save <image name> // saves map to image
+map_gen <size> // generates new map // only one param because it is square
+map_print // prints current map
+map_save <image name> // saves map to image
