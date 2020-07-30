@@ -3,7 +3,7 @@
 #include <string>
 #include "Parser/Parser.h"
 #include "Parser/Config.h"
-#include "Network/Network.h"
+#include "Network/ServerController.h"
 
 using namespace std;
 
@@ -19,8 +19,8 @@ private:
 	string cur_line;
 	string start_line;
 
-	Config* config;
+	
 	Parser* parser;
-	Network* network;
+	ServerController *server_controller;
 };
 
