@@ -8,6 +8,10 @@ public:
 	ServerController();
 	~ServerController();
 
+	void start(); 
+	void stop();
+
+
 private:
 	Config* config;
 	Network* network;
