@@ -19,8 +19,8 @@ private:
 	string cur_line;
 	string start_line;
 
-	
 	Parser* parser;
+	Config* config;
 	ServerController *server_controller;
 };
 

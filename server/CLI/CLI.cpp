@@ -4,9 +4,10 @@
 
 CLI::CLI(string start_line)
 {
+	this->config = new Config();
 	this->start_line = start_line;
 	this->parser = new Parser;
-	this->server_controller = new ServerController();
+	this->server_controller = new ServerController(config);
 }
 
 CLI::~CLI()

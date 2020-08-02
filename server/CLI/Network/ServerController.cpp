@@ -1,16 +1,15 @@
 #include "ServerController.h"
 
-ServerController::ServerController()
+ServerController::ServerController(Config* cfg)
 {
-	this->config = new Config();
+	this->config = cfg;
 	// TODO: load all config
 
-	this->network = new Network(config);
+	this->network = new Network(cfg);
 }
 
 ServerController::~ServerController()
 {
-	delete config;
 	delete network;
 }
 

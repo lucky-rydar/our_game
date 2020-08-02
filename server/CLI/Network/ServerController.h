@@ -5,7 +5,7 @@
 class ServerController
 {
 public:
-	ServerController();
+	ServerController(Config* cfg);
 	~ServerController();
 
 	void start(); 
