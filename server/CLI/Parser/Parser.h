@@ -2,7 +2,6 @@
 #include <regex>
 #include <string>
 #include <iostream>
-#include "BaseServerFuncs.h"
 
 using namespace std;
 
@@ -17,6 +16,5 @@ public:
 
 private:
 	string line;
-	BaseServerFuncs *funcs;
 };
 

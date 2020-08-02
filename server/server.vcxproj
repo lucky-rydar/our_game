@@ -145,7 +145,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CLI\Parser\BaseServerFuncs.cpp" />
     <ClCompile Include="CLI\Network\Network.cpp" />
     <ClCompile Include="CLI\CLI.cpp" />
     <ClCompile Include="CLI\Network\DownLoader.cpp" />
@@ -162,7 +161,6 @@
     <ClCompile Include="CLI\Network\ServerController.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CLI\Parser\BaseServerFuncs.h" />
     <ClInclude Include="CLI\Network\Network.h" />
     <ClInclude Include="CLI\CLI.h" />
     <ClInclude Include="CLI\Network\DownLoader.h" />
