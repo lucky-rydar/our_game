@@ -21,8 +21,11 @@ void CLI::get_line()
 	cout << start_line;
 	getline(cin, cur_line);
 
-	//TODO: calling parser to parse data and call the func we need
-	parser->parse(cur_line);
+	auto pars_res = parser->parse(cur_line);
+
+	if (pars_res[0] == "server")
+		server_controller->server(pars_res[1]);
+	//TODO: another commands
 }
 
 

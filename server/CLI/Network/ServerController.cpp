@@ -13,6 +13,15 @@ ServerController::~ServerController()
 	delete network;
 }
 
+void ServerController::server(string func)
+{
+	if (func == "start")
+		start();
+	else if (func == "stop")
+		stop();
+
+}
+
 void ServerController::start()
 {
 }

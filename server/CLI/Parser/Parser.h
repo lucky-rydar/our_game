@@ -11,7 +11,7 @@ public:
 	Parser();
 	~Parser();
 
-	void parse(string line);
+	vector<string> parse(string line);
 
 
 private:
