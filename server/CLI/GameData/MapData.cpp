@@ -1,6 +1,6 @@
 #include "MapData.h"
 
-MapData::MapData(vector<vector<short>> data)
+MapData::MapData(vector<vector<float>> data)
 {
 	map = data;
 }
@@ -12,5 +12,7 @@ void MapData::setSize(int size)
 
 void MapData::generateMap()
 {
-
+	MapGenerator map_gen;
+	
+	this->map = map_gen.gen(9);
 }

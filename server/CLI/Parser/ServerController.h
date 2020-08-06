@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
-#include "Network.h"
-#include "../Parser/Config.h"
+#include "../Network/Network.h"
+#include "Config.h"
 
 using namespace std;
 

@@ -1,18 +1,19 @@
 #pragma once
 #include <vector>
+#include "MapGenerator.h"
 
 using namespace std;
 
 class MapData
 {
 public:
-	MapData(vector<vector<short>> data);
+	MapData(vector<vector<float>> data);
 	
 	void setSize(int size);
 	void generateMap(); // TODO
 
 private:
-	vector<vector<short>> map;
+	vector<vector<float>> map;
 	int size;
 };
 

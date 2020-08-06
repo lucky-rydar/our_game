@@ -3,7 +3,7 @@
 #include <string>
 #include "Parser/Parser.h"
 #include "Parser/Config.h"
-#include "Network/ServerController.h"
+#include "Parser/ServerController.h"
 
 using namespace std;
 

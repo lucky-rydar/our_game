@@ -14,7 +14,7 @@
     <ClCompile Include="CLI\GameData\Location.cpp" />
     <ClCompile Include="CLI\GameData\Player.cpp" />
     <ClCompile Include="CLI\GameData\MapGenerator.cpp" />
-    <ClCompile Include="CLI\Network\ServerController.cpp" />
+    <ClCompile Include="CLI\Parser\ServerController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLI\Network\DownLoader.h" />
@@ -29,6 +29,6 @@
     <ClInclude Include="CLI\GameData\Location.h" />
     <ClInclude Include="CLI\GameData\Player.h" />
     <ClInclude Include="CLI\GameData\MapGenerator.h" />
-    <ClInclude Include="CLI\Network\ServerController.h" />
+    <ClInclude Include="CLI\Parser\ServerController.h" />
   </ItemGroup>
 </Project>
