@@ -23,7 +23,7 @@ void Client::update()
 
 void Client::addData(Instruction instruction)
 {
-	upLoader->vector_data.push_back(instruction);
+	upLoader->addInstruction(instruction);
 }
 
 map<string, string>& Client::getData()

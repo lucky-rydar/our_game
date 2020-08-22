@@ -14,9 +14,9 @@ public:
 	~UpLoader();
 
 	void send();
-	vector<Instruction> vector_data;
+	void addInstruction(Instruction instruction);
+	
 private:
-	void toPacket();
 	
 	Config* cfg;
 	

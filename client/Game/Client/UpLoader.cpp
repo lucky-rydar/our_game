@@ -13,14 +13,10 @@ UpLoader::~UpLoader()
 
 void UpLoader::send()
 {
-	toPacket();
 	socket.send(pack, IpAddress(cfg->getParam("ip")), stoi(cfg->getParam("port")));
 }
 
-void UpLoader::toPacket()
+void UpLoader::addInstruction(Instruction instruction)
 {
-	for (int i = 0; i < this->vector_data.size(); i++)
-	{
-		this->pack << vector_data[i].key << vector_data[i].value;
-	}
+	pack << instruction.key << instruction.value;
 }
