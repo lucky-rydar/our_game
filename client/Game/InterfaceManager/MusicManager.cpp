@@ -38,10 +38,10 @@ void MusicManager::countFilesIn(string path)
 	int counter = 0;
 	for (size_t i = 0; !dirIter._At_end(); i++)
 	{
-		if (dirIter->is_regular_file())
+		if (dirIter->is_regular_file() && dirIter->path().extension() == ".ogg")
 		{
-			counter++;
 			this->list_of_tracks.push_back(dirIter->path().filename().string());
+			counter++;
 		}
 		
 		dirIter++;
