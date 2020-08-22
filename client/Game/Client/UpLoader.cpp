@@ -14,6 +14,7 @@ UpLoader::~UpLoader()
 void UpLoader::send()
 {
 	socket.send(pack, IpAddress(cfg->getParam("ip")), stoi(cfg->getParam("port")));
+	pack.clear();
 }
 
 void UpLoader::addInstruction(Instruction instruction)
