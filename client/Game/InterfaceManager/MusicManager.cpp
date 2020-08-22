@@ -35,11 +35,18 @@ void MusicManager::countFilesIn(string path)
 {
 	auto dirIter = std::filesystem::directory_iterator(path);
 
-	this->numOfFiles = (unsigned int)std::count_if(
-		begin(dirIter),
-		end(dirIter),
-		[](auto& entry) { return entry.is_regular_file(); }
-	);
+	int counter = 0;
+	for (size_t i = 0; !dirIter._At_end(); i++)
+	{
+		if (dirIter->is_regular_file())
+		{
+			counter++;
+			this->list_of_tracks.push_back(dirIter->path().filename().string());
+		}
+		
+		dirIter++;
+	}
+	this->numOfFiles = counter;	
 }
 
 void MusicManager::playing()
@@ -50,8 +57,8 @@ void MusicManager::playing()
 	unsigned int num_of_cycles;
 	while (canPlay)
 	{
-		current = rand() % this->numOfFiles + 1;
-		track.openFromFile(path + to_string(current) + ".ogg");
+		current = rand() % this->numOfFiles;
+		track.openFromFile(path + list_of_tracks[current]);
 		
 		duration = track.getDuration().asMilliseconds();
 		num_of_cycles = duration / 20;

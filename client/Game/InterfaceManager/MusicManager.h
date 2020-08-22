@@ -24,6 +24,8 @@ private:
 
 	bool canPlay;
 	unsigned int numOfFiles;
+
+	vector<string> list_of_tracks;
 	Thread *th;
 	Music track;
 	string path;
