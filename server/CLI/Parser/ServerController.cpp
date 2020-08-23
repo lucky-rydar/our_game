@@ -24,8 +24,10 @@ void ServerController::server(string func)
 
 void ServerController::start()
 {
+	puts("Server started."); // puts() used for server logging
 }
 
 void ServerController::stop()
 {
+	puts("Server stoped.");
 }
