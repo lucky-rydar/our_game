@@ -1,6 +1,6 @@
 #include "CheckBox.h"
 
-CheckBox::CheckBox(sf::Texture box, sf::Texture mark, float x, float y, float scalex, float scaley, sf::RenderWindow* wnd)
+CheckBox::CheckBox(sf::Texture box, sf::Texture mark, float x, float y, float scalex, float scaley, sf::RenderWindow* wnd, uint32_t waiting_time)
 {
 	this->wnd = wnd;
 
@@ -17,6 +17,11 @@ CheckBox::CheckBox(sf::Texture box, sf::Texture mark, float x, float y, float sc
 
 	this->isChecked = new bool;
 	this->isChecked = false;
+
+	this->wait_time = waiting_time;
+	this->waited = 0;
+
+	timer.restart();
 }
 
 CheckBox::~CheckBox()
@@ -37,26 +42,28 @@ void CheckBox::update(sf::Event* eve)
 	sf::Mouse mouse;
 	auto pos = mouse.getPosition(*wnd);
 	
-	if (eve->type == sf::Event::MouseButtonPressed)
+	auto elapsed = timer.getElapsedTime().asMilliseconds();
+	this->waited += elapsed;
+	timer.restart();
+
+	if (mouse.isButtonPressed(Mouse::Button::Left) && this->waited >= this->wait_time)
 	{
-		if (eve->mouseButton.button == sf::Mouse::Left)
+		if (isOnCheck(pos))
 		{
-			if (isOnCheck(pos))
+			if (this->isChecked)
 			{
-				if (this->isChecked)
-				{
-					this->isChecked = false;
-					nonCheck();
-				}
-				if(!this->isChecked)
-				{
-					this->isChecked = true;
-					onCheck();
-				}
+				this->isChecked = false;
+				nonCheck();
+			}
+			else if (!this->isChecked)
+			{
+				this->isChecked = true;
+				onCheck();
 			}
 		}
-	}
 
+		waited -= wait_time;
+	}
 }
 
 
