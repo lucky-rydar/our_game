@@ -1,8 +1,9 @@
 #include "InterfaceManager.h"
-Vector2f winSize(1280, 720);
 
-InterfaceManager::InterfaceManager(Client *client)
+InterfaceManager::InterfaceManager(Client* client, Vector2f winSize)
 {
+	this->winSize = winSize;
+	
 	eve = new Event;
 	window = new RenderWindow(VideoMode(winSize.x, winSize.y), "our_game");
 		

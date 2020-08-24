@@ -12,14 +12,14 @@ using namespace sf;
 class InterfaceManager
 {
 public:
-	InterfaceManager(Client* client);
+	InterfaceManager(Client* client, Vector2f winSize = { 1280, 720});
 	~InterfaceManager();
 
 	void draw();
 	void update();
 
 private:
-	
+	Vector2f winSize;
 
 	MainMenu *mainMenu;
 	GameMenu *gameMenu;
