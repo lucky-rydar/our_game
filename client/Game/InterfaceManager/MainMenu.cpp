@@ -38,7 +38,10 @@ MainMenu::MainMenu(sf::Vector2f WindowSize, Event *eve, RenderWindow* win, Curre
 	this->SettingsSounds->setOnButtonFunc([this]() {*curMMenu = CurrentMainMenu::SettingsSound; });
 
 	this->ExitButton = new SpriteButton(font, sf::String("Exit"), WindowSize.x / 2, WindowSize.y / 2, 1.f, 1.f, texture, win);
-	this->ExitButton->setOnButtonFunc([win]() {win->close(); });
+	this->ExitButton->setOnButtonFunc([win]() {
+		win->close();
+		exit(0);
+		});
 
 	this->label = new Label(font, sf::String("our_game"), WindowSize.x / 2, WindowSize.y / 8 - 25, sf::Color::White);
 
