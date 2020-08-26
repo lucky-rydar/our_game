@@ -8,7 +8,7 @@ using namespace sf;
 class CheckBox
 {
 public:
-	CheckBox(sf::Texture box, sf::Texture mark, float x, float y, float scalex, float scaley, sf::RenderWindow* wnd, uint32_t waiting_time = 500);
+	CheckBox(sf::Texture box, sf::Texture mark, float x, float y, float scalex, float scaley, sf::RenderWindow* wnd);
 	~CheckBox();
 
 	void draw();
@@ -30,10 +30,5 @@ private:
 	sf::Texture* MarkTexture;
 
 	sf::RenderWindow* wnd;
-
-	uint32_t wait_time;
-	uint32_t waited;
-
-	sf::Clock timer;
 };
 
